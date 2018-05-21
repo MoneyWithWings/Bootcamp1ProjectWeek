@@ -9,15 +9,32 @@
 <body>
     <div id="root"></div>
 
-        <h1 id="static-heading">I'm a heading, can you change me?</h1>
+        <h1 id="static-heading">I'm a static heading, can you change me?</h1>
 
+        <select id="dropdown" onchange="putFunctionHere()">
+            <option value ="Skew">Skew</option>
+            <option value ="Rotate">Rotate</option>
+            <option value ="Box-Color">Box-Color</option>
+            <option value ="Perspective-Rotate">Perspective-Rotate</option>
+            <option value ="Perspective-Shift">Perspective-Shift</option>
+            <option value ="SpinnerY">SpinnerY</option>
+            <option value ="SpinnerX">SpinnerX</option>
+            <option value ="">test</option>
+            <option value ="">test</option>
+        </select>
+
+        <template id="app-template"></template>
 
         <template id="display-template">
             <div>
                 <h1>I'm an h1</h1>
                 <section id="display-word-section"></section>
             </div>
-        </template>
+        </template> 
+
+        <template id="dropdown-template"></template>
+
+
     
 </body>
 </html>
