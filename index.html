@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/effects.css" rel="stylesheet" type="text/css">
     <title>CSS Effects</title>
 </head>
 <body>
@@ -19,11 +20,11 @@
         </template>
 
         <template id="display-template">
-            <h1>This is the display</h1>
+            <h1 id="displayWord">This is the display</h1>
         </template> 
 
         <template id="dropdown-template">
-            <select id="dropdown" onchange="">
+            <select id="dropdown" onchange="updateDisplayWord()">
                 <option value ="Skew">Skew</option>
                 <option value ="Rotate">Rotate</option>
                 <option value ="Box-Color">Box-Color</option>
@@ -40,5 +41,6 @@
     <script src="js/DisplayComponent.js"></script>
     <script src="js/EffectsApp.js"></script>
     <script src="js/EffectsAppMain.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>
