@@ -11,30 +11,34 @@
 
         <h1 id="static-heading">I'm a static heading, can you change me?</h1>
 
-        <select id="dropdown" onchange="putFunctionHere()">
-            <option value ="Skew">Skew</option>
-            <option value ="Rotate">Rotate</option>
-            <option value ="Box-Color">Box-Color</option>
-            <option value ="Perspective-Rotate">Perspective-Rotate</option>
-            <option value ="Perspective-Shift">Perspective-Shift</option>
-            <option value ="SpinnerY">SpinnerY</option>
-            <option value ="SpinnerX">SpinnerX</option>
-            <option value ="">test</option>
-            <option value ="">test</option>
-        </select>
+   
 
-        <template id="app-template"></template>
+        <template id="app-template">
+            <section id="display-word"></section>
+            <section id="display-dropdown"></section>
+        </template>
 
         <template id="display-template">
-            <div>
-                <h1>I'm an h1</h1>
-                <section id="display-word-section"></section>
-            </div>
+            <h1>This is the display</h1>
         </template> 
 
-        <template id="dropdown-template"></template>
+        <template id="dropdown-template">
+            <select id="dropdown" onchange="">
+                <option value ="Skew">Skew</option>
+                <option value ="Rotate">Rotate</option>
+                <option value ="Box-Color">Box-Color</option>
+                <option value ="Perspective-Rotate">Perspective-Rotate</option>
+                <option value ="Perspective-Shift">Perspective-Shift</option>
+                <option value ="SpinnerY">SpinnerY</option>
+                <option value ="SpinnerX">SpinnerX</option>
+            </select>
+        </template>
 
 
-    
+    <script src="js/data.js"></script>
+    <script src="js/EffectsChangeComponent.js"></script>
+    <script src="js/DisplayComponent.js"></script>
+    <script src="js/EffectsApp.js"></script>
+    <script src="js/EffectsAppMain.js"></script>
 </body>
 </html>
