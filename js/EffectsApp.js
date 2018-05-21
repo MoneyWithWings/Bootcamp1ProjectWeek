@@ -1,21 +1,28 @@
 'use strict';
 
-const appTemplate = document.getElementById('app-template').content
+const appTemplate = document.getElementById('app-template').content;
 
-new App {
+class App {
 
     constructor() {
-        this.effect = effect;
+
     }
+    // let selectedValue = document.getElementById('effects-dropdown').value;
+    // console.log(selectedValue);
 
     render(){
         const dom = appTemplate;
+        
+        const displayWordSection = dom.getElementById('display-word');
+        const displayWordComponent = new WordToDisplay();
+        const displayWordDom = displayWordComponent.render();
+        displayWordSection.appendChild(displayWordDom);
 
-        const displayDropdown = dom.getElementById('dropdown')
-        let selectedValue = document.getElementById('dropdown').value
-        const displayComponent = new EffectToApply(selectedValue);
-        const selectorDom = displayComponent.render();
+        const displayDropdown = dom.getElementById('display-dropdown');
+        const displayDropdownComponent = new EffectToApply();
+        const selectorDom = displayDropdownComponent.render();
         displayDropdown.appendChild(selectorDom);
+
 
         return dom;
     }

@@ -1,6 +1,6 @@
 'use strict';
 
-const app = new ApplicationCache();
+const app = new App();
 
 const dom = app.render();
 
