@@ -1,0 +1,137 @@
+body {
+  background-color: lightblue;
+}
+
+img {
+  margin: 15%;
+}
+
+h1 {
+  margin: 0px;
+}
+
+
+/* Skew */
+.skew {
+  
+-webkit-animation: skew 3s infinite;
+animation: skew 3s infinite;
+-webkit-transform: skew(20deg);
+transform: skew(20deg);
+-webkit-animation-direction: alternate;
+animation-direction: alternate;
+
+}
+@keyframes skew {
+  0% {
+      transform: skewX(20deg);
+  }
+  100% {
+      transform: skewX(-20deg);
+  }
+}
+
+
+
+/* Rotate */
+.rotate {
+  animation: roll 3s infinite;
+  transform: rotate(30deg);
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+}
+
+
+
+/* Box Background Color Change */
+.box-bgcolor-change {
+
+}
+
+.box-bgcolor-change:hover {
+  background-color: green;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+
+
+/* Perspective Rotate */
+.perspective1 {
+  perspective: 1000px;
+  transition: .3s; 
+  transform: rotateY(40deg);
+}
+
+.perspective1:hover {
+  transform: rotate(0)
+  
+}
+
+
+/* Perspective Shift */
+.perspective2
+{
+transform: rotateX(-20deg) rotateY(-40deg) perspective(600px);
+}
+
+
+/* Spinner Y-axis */
+@-webkit-keyframes spinner {
+  from { -webkit-transform: rotateY(0deg);    }
+  to   { -webkit-transform: rotateY(-360deg); }
+}
+
+
+.spinner {
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+
+
+/* Spinner X-axis */
+@-webkit-keyframes spinner {
+  from { -webkit-transform: rotateX(0deg);    }
+  to   { -webkit-transform: rotateX(-360deg); }
+}
+
+
+.spinnerX {
+  -webkit-animation-name: spinner;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 6s;
+
+  animation-name: spinner;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
