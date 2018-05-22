@@ -1,8 +1,26 @@
+h1 {
+    text-align: center; 
+    margin-bottom: 35px;
+}
+
+#text-over-image {
+    display: flex;
+    justify-content: center;
+}
+ 
+h2 {
+margin-top: 280px;
+font-family: 'Open Sans', sans-serif;
+font-size: 40px;
+
+}
+
 body {
     background-color: rgb(191, 215, 240);
     margin: 0px auto;
     max-width: 66%;
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
 p {
@@ -12,35 +30,84 @@ p {
 
 li {
     margin: 5px;
-    }
+    
+}
+
+a:link, a:visited {
+        background-color:black;
+        opacity: 0.5;   
+        color: white;
+        padding: 1px 30px;
+        width: 70px;
+        text-align: center; 
+        text-decoration: none;
+        display: inline-block;
+}
+    
+a:hover {
+        opacity: 1.0;
+}
+  
+#main-bg-image {
+    background-image: url("images/cow.jpg");
+    height: 360px;
+}
 
 #nav-list {
+    color: black;
     display: flex;
-    justify-content: flex-end;
-    list-style: none;
+    justify-content: center;
+    list-style-type: none;
     margin-bottom: 30px;
+    text-decoration: none;
 }
 
-#mock-h1 {
-        font-size: 50px;
-        font-family: 'Roboto', sans-serif;
-        color: rgba(245, 244, 239, 0.79)
-    }
-
-#footer-bar {
-        border-top: 2px solid darkgray;
-        padding: 30px;
-    }
-
-#mock-main {
+#main-text {
     display: flex;
+    flex-wrap: wrap;
 }
 
-#mock-body-image {
+.mock-main {
     display: flex;
-    justify-content: flex-start;
-    width: 30%;
-    height: 40%;
-    margin: 3%;
+    flex-direction: row;
+    justify-content: center;
+}
 
+button {
+    border-color: white;
+    border-radius: 8px;
+    background-color: Transparent;
+    margin-left: 20px;
+    padding: 6px;
+    font-size: 16px;
+}
+
+.flex-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px solid darkgray;
+    border-bottom: 1px solid darkgray;
+    padding-top: 3%;
+    font-size: 12px;
+}
+
+#footer-image {
+    height: 70%;
+    margin-right: 20px;
+}
+
+#footer-text {
+    width: 20%;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 5%;  
+    font-style: 'Open Sans', sans-serif;
+}
+
+#copyright {
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    font-style: 'Open Sans', sans-serif;
 }
