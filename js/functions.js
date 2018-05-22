@@ -1,5 +1,5 @@
 'use strict';
-/* exported updateDisplayWord, updateBackgroundColor */
+/* exported updateDisplayWord, updateBackgroundColor, updateInputWord */
 
 
 function updateDisplayWord() {
@@ -15,4 +15,14 @@ function updateBackgroundColor() {
     let colorValue = colorContainer.querySelector('input').value;
 
     document.querySelector('body').style.backgroundColor = '#' + colorValue + '';
+}
+
+function updateInputWord() {
+    const input = document.getElementById('input-text-box').value;
+    const displayWord = document.getElementById('displayWord');
+    if(input) {
+        displayWord.innerHTML = input;
+    } else {
+        displayWord.innerHTML = 'Enter text!';
+    }
 }

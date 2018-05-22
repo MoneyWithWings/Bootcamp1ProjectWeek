@@ -13,47 +13,22 @@
     <div id="root"></div>  
     
     
-        <template id="app-template">
-            <section id="display-word"></section>
-            <section id="display-input"></section>
+    <template id="app-template">
+        <h1 id="displayWord">Enter text!</h1>
+        <input type="text" id="input-text-box" oninput="updateInputWord()" placeholder="Enter Your Text Here">
             <section id="display-dropdown"></section>
         </template>
 
-
         
-    
-        <template id="display-template">
-            <h1 id="displayWord">Enter text!</h1>
-        </template> 
-
-        <template id="input-template">
-            <form>
-                <input type="text" id="input-text-box" oninput="updateInputWord()" placeholder="Enter Your Text Here">
-            </form>
-        </template> 
-
         <template id="dropdown-template">
+                <br>
             <select>
-                <option value ="Box-Color">Box Color (Hover)</option>
-                <option value ="Marshmallow">Marshmallow</option>
-                <option value ="Perspective-Rotate">Perspective Rotate</option>
-                <option value ="Perspective-Shift">Perspective Shift</option>
-                <option value ="Rotate">Rotate 360&deg;</option>
-                <option value ="Shadow Elegant">Shadow - Elegant</option>
-                <option value ="Shadow DeepShadow">Shadow - Deep</option>
-                <option value ="Shadow InsetShadow">Shadow - Inset</option>
-                <option value ="Shadow RetroShadow">Shadow - Retro</option>
-                <option value ="Skew">Skew</option>
-                <option value ="SpinnerY">Spinner Y-axis 360&deg;</option>
-                <option value ="SpinnerX">Spinner X-axis 360&deg;</option>
             </select>
         </template>
 
 
     <script src="js/data.js"></script>
-    <script src="js/InputComponent.js"></script>
     <script src="js/EffectsChangeComponent.js"></script>
-    <script src="js/DisplayComponent.js"></script>
     <script src="js/EffectsApp.js"></script>
     <script src="js/EffectsAppMain.js"></script>
     <script src="js/functions.js"></script>

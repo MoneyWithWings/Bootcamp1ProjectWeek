@@ -4,6 +4,10 @@
 
 const effectsArray = [
     {
+        class: '',
+        label: 'Select An Effect',
+    },
+    {
         class: 'Box-Color',
         label: 'Box Color (Hover)',
     },
@@ -13,7 +17,7 @@ const effectsArray = [
     },
     {
         class: 'Perspective-Rotate',
-        label: 'Perspective Rotate',
+        label: 'Stretch (Hover)',
     },
     {
         class: 'Perspective-Shift',
@@ -21,7 +25,7 @@ const effectsArray = [
     },
     {
         class: 'Rotate',
-        label: 'Rotate 360&deg;',
+        label: 'Rotate 360',
     },
     {
         class: 'Shadow Elegant',
@@ -45,11 +49,11 @@ const effectsArray = [
     },
     {
         class: 'SpinnerY',
-        label: 'Spinner Y-axis 360&deg;',
+        label: 'Spinner Y-axis 360',
     },
     {
         class: 'SpinnerX',
-        label: 'Spinner X-axis 360&deg;',
+        label: 'Spinner X-axis 360',
     },
 
 ];
