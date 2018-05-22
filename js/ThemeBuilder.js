@@ -1,5 +1,5 @@
 'use strict';
-/* globals ColorPicker, */
+/* globals ColorPicker, DropDownMenu fontsArray */
 /* exported App */
 
 const appTemplate = document.getElementById('app-template').content;
@@ -28,7 +28,7 @@ class App {
             let colorValue = colorContainer.querySelector('input').value;
             
             document.getElementById('mock-page-content').style.backgroundColor = '#' + colorValue + '';
-        }); 
+        });
 
 
 
@@ -83,6 +83,7 @@ class App {
             let dropDownValue = document.getElementById('header-font-dd').value;
             var displayWord = document.getElementById('mock-h1');
             displayWord.style.fontFamily = dropDownValue;
+            console.log(dropDownValue);
             // displayWord.removeAttribute('class');
             // displayWord.setAttribute('class', dropDownValue);
         });
