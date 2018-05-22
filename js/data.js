@@ -1,6 +1,6 @@
 'use strict';
 /* globals */
-/* exported effectsArray */
+/* exported effectsArray fontsArray */
 
 const effectsArray = [
     {
@@ -74,47 +74,47 @@ font-family: 'Shadows Into Light Two', cursive; */
 
 const fontsArray = [
     {
-        font: '',
+        class: '',
         label: 'Select A Font',
     },
     {
-        font: "'Luckiest Guy', cursive;",
+        class: 'Luckiest Guy',
         label: 'Luckiest Guy',
     },
     {
-        font: "'Kavivanar', cursive;",
+        class: 'Kavivanar',
         label: 'Kavivanar',
     },
     {
-        font: "'Indie Flower', cursive;",
+        class: 'Indie Flower',
         label: 'Indie Flower',
     },
     {
-        font: "'Lobster', cursive;",
+        class: 'Lobster',
         label: 'Lobster',
     },
     {
-        font: "'Pacifico', cursive;",
+        class: 'Pacifico',
         label: 'Pacifico',
     },
     {
-        font: "'Codystar', cursive;",
+        class: 'Codystar',
         label: 'Codystar',
     },
     {
-        font: "'Permanent Marker', cursive;",
+        class: 'Permanent Marker',
         label: 'Permanent Marker',
     },
     {
-        font: "'Monoton', cursive;",
+        class: 'Monoton',
         label: 'Monoton',
     },
     {
-        font: "'Kalam', cursive;",
+        class: 'Kalam',
         label: 'Kalam',
     },
     {
-        font: "'Shadows Into Light Two', cursive;",
+        class: 'Shadows Into Light Two',
         label: 'Shadows Into Light',
     },
 
