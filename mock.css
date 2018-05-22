@@ -1,3 +1,11 @@
+#mock-page-content {
+    background-color: rgb(191, 215, 240);
+    margin: 0px auto;
+    max-width: 66%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
 #mock-h1 {
     text-align: center; 
     padding-top: 20px;
@@ -13,19 +21,10 @@
 }
  
 #mock-h2 {
-margin-top: 280px;
+margin-top: 230px;
 font-family: 'Open Sans', sans-serif;
 font-size: 40px;
 }
-
-#mock-page-content {
-    background-color: rgb(191, 215, 240);
-    margin: 0px auto;
-    max-width: 66%;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-}
-
 
 a:link, a:visited {
     background-color:black;
@@ -41,23 +40,6 @@ a:link, a:visited {
 a:hover {
     opacity: 1.0;
 }
-
-#main-bg-image {
-    background-image: url("images/cow.jpg");
-    height: 360px;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-#mock-paragraph {
-    margin: 2%;
-    line-height: 1.5;
-}
-
-.nav-list-li {
-    margin: 1%;
-}
-
 #nav-list {
     color: black;
     display: flex;
@@ -67,10 +49,27 @@ a:hover {
     text-decoration: none;
 }
 
+#main-bg-image {
+    background-image: url("images/cow.jpg");
+    height: 300px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#mock-paragraph {
+    margin: 2%;
+    line-height: 1.25;
+}
+
+.nav-list-li {
+    margin: 1%;
+}
+
+
 #main-text {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
 }
 
 .mock-main {
@@ -81,7 +80,7 @@ a:hover {
 
 /* need to make footer section shorter*/
 
-.flex-footer {
+#flex-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -110,6 +109,7 @@ a:hover {
 #footer-button {
     border-color: white;
     border-radius: 8px;
+    border-width: 3px;
     background-color: Transparent;
     margin-left: 20px;
     margin-right: 25px;

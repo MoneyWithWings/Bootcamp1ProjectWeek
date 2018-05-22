@@ -15,7 +15,6 @@ class App {
     render(){
         const dom = appTemplate;
 
-
         
         const displayBackgroundColorPicker = dom.getElementById('background-color-picker');
         const displayBackgroundColorPickerComponent = new ColorPicker('Background', 'bgColor');
@@ -28,8 +27,8 @@ class App {
             let colorContainer = colorStart.querySelector('div');
             let colorValue = colorContainer.querySelector('input').value;
             
-            document.querySelector('body').style.backgroundColor = '#' + colorValue + '';
-        });
+            document.getElementById('mock-page-content').style.backgroundColor = '#' + colorValue + '';
+        }); 
 
 
 
@@ -44,13 +43,13 @@ class App {
             let colorContainer = colorStart.querySelector('div');
             let colorValue = colorContainer.querySelector('input').value;
         
-            document.getElementById('alter-text').style.color = '#' + colorValue + '';
+            document.getElementById('test').style.color = '#' + colorValue + '';
         });
 
 
 
         const displayHeaderColorPicker = dom.getElementById('header-color-picker');
-        const displayHeaderColorPickerComponent = new ColorPicker('header', 'headerColor');
+        const displayHeaderColorPickerComponent = new ColorPicker('Header', 'headerColor');
         const displayHeaderDom = displayHeaderColorPickerComponent.render();
         displayHeaderColorPicker.appendChild(displayHeaderDom);
 
@@ -59,7 +58,20 @@ class App {
             let colorContainer = colorStart.querySelector('div');
             let colorValue = colorContainer.querySelector('input').value;
             
-            document.getElementById('alter-header').style.color = '#' + colorValue + '';
+            document.getElementById('mock-h1').style.color = '#' + colorValue + '';
+        });
+
+        const displayFooterColorPicker = dom.getElementById('footer-color-picker');
+        const displayFooterColorPickerComponent = new ColorPicker('Footer', 'footerColor');
+        const displayFooterDom = displayFooterColorPickerComponent.render();
+        displayFooterColorPicker.appendChild(displayFooterDom);
+
+        dom.getElementById('footerColor').addEventListener('change', () => {
+            let colorStart = document.getElementById('footer-color-picker');
+            let colorContainer = colorStart.querySelector('div');
+            let colorValue = colorContainer.querySelector('input').value;
+            
+            document.getElementById('flex-footer').style.color = '#' + colorValue + '';
         });
 
         
