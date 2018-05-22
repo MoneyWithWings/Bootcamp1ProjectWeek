@@ -21,6 +21,11 @@ class App {
         const displayTDom = displayTextColorPickerComponent.render();
         displayTextColorPicker.appendChild(displayTDom);
 
+        const displayHeaderColorPicker = dom.getElementById('header-color-picker');
+        const displayHeaderColorPickerComponent = new ColorPicker('header', 'headerColor');
+        const displayHeaderDom = displayHeaderColorPickerComponent.render();
+        displayHeaderColorPicker.appendChild(displayHeaderDom);
+
         const backgroundColor = dom.getElementById('bgColor');
         dom.getElementById('bgColor').addEventListener('change', () => {
             let colorStart = document.getElementById('background-color-picker');
@@ -40,6 +45,14 @@ class App {
             let colorValue = colorContainer.querySelector('input').value;
         
             document.getElementById('alter-text').style.color = '#' + colorValue + '';
+        });
+
+        dom.getElementById('headerColor').addEventListener('change', () => {
+            let colorStart = document.getElementById('header-color-picker');
+            let colorContainer = colorStart.querySelector('div');
+            let colorValue = colorContainer.querySelector('input').value;
+            
+            document.getElementById('alter-header').style.color = '#' + colorValue + '';
         });
 
         // const displayDropdown = dom.getElementById('display-dropdown');
