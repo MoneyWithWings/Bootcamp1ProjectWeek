@@ -1,3 +1,11 @@
+#mock-page-content {
+    background-color: rgb(191, 215, 240);
+    margin: 0px auto;
+    max-width: 66%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+}
+
 #mock-h1 {
     text-align: center; 
     padding-top: 20px;
@@ -18,13 +26,6 @@ font-family: 'Open Sans', sans-serif;
 font-size: 40px;
 }
 
-#mock-page-content {
-    background-color: rgb(191, 215, 240);
-    margin: 0px auto;
-    max-width: 66%;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.5;
-}
 
 
 a:link, a:visited {
@@ -70,7 +71,7 @@ a:hover {
 #main-text {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
 }
 
 .mock-main {
@@ -81,7 +82,7 @@ a:hover {
 
 /* need to make footer section shorter*/
 
-.flex-footer {
+#flex-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
