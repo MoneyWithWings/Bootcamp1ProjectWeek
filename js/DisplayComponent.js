@@ -1,4 +1,4 @@
-const displayTemplate = document.getElementById('display-template').content
+const displayTemplate = document.getElementById('display-template').content;
 
 class WordToDisplay {
 
