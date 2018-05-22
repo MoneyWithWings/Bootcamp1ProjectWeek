@@ -1,31 +1,26 @@
+'use strict';
+/* globals */
+/* exported ColorPicker */
+
 const colorPickerTemplate = document.getElementById('color-picker-template').content;
 
 class ColorPicker {
-    constructor(label, id) {
+    constructor(label, onPick) {
         this.label = label;
-        this.id = id;
+        this.onPick = onPick;
     }
 
     render(){
         const dom = colorPickerTemplate.cloneNode(true);
 
         const container = dom.querySelector('div');
-        console.log(container);
         const colorPickerName = container.querySelector('span');
         colorPickerName.textContent = this.label;
         
-        const colorPickerForm = container.querySelector('input');
-        colorPickerForm.setAttribute('id', this.id);
-
-
-       //console.log(colorPickerForm);
-        // colorPickerForm.forEach(test => {
-        //     console.log(test);
-        //     colorPickerForm.id = 'input-0';
-        // });
-        // for(let i = 0; i < 3; i++){
-        //     colorPickerForm.setAttribute('id', 'input-' + i);
-        // }
+        const colorPicker = container.querySelector('input');
+        colorPicker.addEventListener('change', () => {
+            this.onPick(colorPicker.value);
+        });
         
 
         return dom;
