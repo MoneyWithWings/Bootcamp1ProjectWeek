@@ -46,13 +46,12 @@ class App {
         //Footer Color Picker
         const displayFooterColorPicker = dom.getElementById('footer-color-picker');
         const displayFooterColorPickerComponent = new ColorPicker('Footer', (colorValue) => {
-            document.getElementById('flex-footer').style.color = '#' + colorValue + '';
+            document.getElementById('footer-text').style.color = '#' + colorValue + '';
         });
 
         const displayFooterDom = displayFooterColorPickerComponent.render();
         displayFooterColorPicker.appendChild(displayFooterDom);
-        
-
+       
 
         const displayDropdown = dom.getElementById('header-text-dropdown');
         const displayDropdownComponent = new DropDownMenu(fontsArray, 'header-font-dd');
