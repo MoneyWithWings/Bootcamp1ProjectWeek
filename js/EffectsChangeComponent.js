@@ -14,7 +14,13 @@ class DropDownMenu {
 
     render() {
 
-        const dom = dropDownTemplate;
+        const dom = dropDownTemplate.cloneNode(true);
+        const dropDownId = dom.querySelector('select');
+        dropDownId.setAttribute('id', this.id);
+
+        for(var i = 0; i < this.data.length; i++) {
+            
+        }
         // this.container = dom.querySelector('select');
         // const chosenEffect = this.container.querySelector('option');
         // chosenEffect.addEventListener('select', () => {

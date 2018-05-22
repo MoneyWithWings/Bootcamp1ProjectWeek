@@ -3,7 +3,7 @@
 
 
 function updateDisplayWord() {
-    var dropDownValue = document.getElementById('dropdown').value;
+    var dropDownValue = document.getElementById('drop-down-id').value;
     var displayWord = document.getElementById('displayWord');
     displayWord.removeAttribute('class');
     displayWord.setAttribute('class', dropDownValue);
