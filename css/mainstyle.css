@@ -1,9 +1,16 @@
-#root {    
-    /* max-width: 600px;
-    margin: auto;
-    background: white;
-    padding: 10px; */
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-end;
+#display-word {
+    width: 960px;
+    height: 200px;
+}
+
+#displayWord {
+    width: fit-content;
+    height: fit-content;
+    font-size: 96px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#input-text-box {
+    margin-bottom: 50px;
+    margin-top: 100px;
 }
