@@ -47,20 +47,14 @@ animation-direction: alternate;
     transform: rotate(360deg);
   }
 }
-}
 
 
 
 /* Box Background Color Change */
-.Box-Color {
-
-}
 
 .Box-Color:hover {
-  background-color: green;
-  -webkit-transition: background-color 2s ease-out;
-  -moz-transition: background-color 2s ease-out;
-  -o-transition: background-color 2s ease-out;
+  background-color: red;
+  width: 300px;
   transition: background-color 2s ease-out;
 }
 
@@ -87,51 +81,47 @@ transform: rotateX(-20deg) rotateY(-40deg) perspective(600px);
 
 
 /* Spinner Y-axis */
-@-webkit-keyframes spinner {
+@keyframes spinnerY {
   from { -webkit-transform: rotateY(0deg);    }
   to   { -webkit-transform: rotateY(-360deg); }
 }
 
 
 .SpinnerY {
-  -webkit-animation-name: spinner;
+  -webkit-animation-name: spinnerY;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 6s;
 
-  animation-name: spinner;
+  animation-name: spinnerY;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 6s;
 
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
 
 
 /* Spinner X-axis */
-@-webkit-keyframes spinner {
+@keyframes spinnerX {
   from { -webkit-transform: rotateX(0deg);    }
   to   { -webkit-transform: rotateX(-360deg); }
 }
 
 
 .SpinnerX {
-  -webkit-animation-name: spinner;
+  -webkit-animation-name: spinnerX;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 6s;
 
-  animation-name: spinner;
+  animation-name: spinnerX;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-duration: 6s;
 
   -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
