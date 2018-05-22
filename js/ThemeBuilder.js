@@ -71,7 +71,7 @@ class App {
             let colorContainer = colorStart.querySelector('div');
             let colorValue = colorContainer.querySelector('input').value;
             
-            document.getElementById('flex-footer').style.color = '#' + colorValue + '';
+            document.getElementById('footer-text').style.color = '#' + colorValue + '';
         });
 
         const displayDropdown = dom.getElementById('header-text-dropdown');

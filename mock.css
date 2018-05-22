@@ -103,6 +103,7 @@ a:hover {
     flex-flow: row wrap;
     align-items: center;
     margin-top: 5%;  
+    color: darkslategrey;
     font-style: 'Open Sans', sans-serif;
 }
 
