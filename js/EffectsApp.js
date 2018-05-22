@@ -1,5 +1,3 @@
-'use strict';
-
 const appTemplate = document.getElementById('app-template').content;
 
 class App {
@@ -12,7 +10,7 @@ class App {
 
     render(){
         const dom = appTemplate;
-        
+
         const displayWordSection = dom.getElementById('display-word');
         const displayWordComponent = new WordToDisplay();
         const displayWordDom = displayWordComponent.render();

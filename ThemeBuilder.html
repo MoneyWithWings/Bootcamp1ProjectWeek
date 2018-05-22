@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>CSS Effects</title>
+        <script src="js/jscolor.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+
+        <p>I am some text please alter my classes.</p>
+
+        <template id="app-template">
+            <section id="background-color-picker"></section>
+        </template>
+
+        <template id="color-picker-template">
+            <span>choose a color!</span>
+            <input class="jscolor">
+        </template> 
+
+        <template id="dropdown-template">
+            <select id="dropdown" onchange="">
+                <option value ="Skew">Skew</option>
+                <option value ="Rotate">Rotate</option>
+                <option value ="Box-Color">Box-Color</option>
+                <option value ="Perspective-Rotate">Perspective-Rotate</option>
+                <option value ="Perspective-Shift">Perspective-Shift</option>
+                <option value ="SpinnerY">SpinnerY</option>
+                <option value ="SpinnerX">SpinnerX</option>
+            </select>
+        </template>
+
+    <script src="js/data.js"></script>
+    <script src="js/EffectsChangeComponent.js"></script>
+    <script src="js/ColorPickerComponent.js"></script>
+    <script src="js/ThemeBuilder.js"></script>
+    <script src="js/EffectsAppMain.js"></script>
+</body>
+</html>
