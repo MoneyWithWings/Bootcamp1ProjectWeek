@@ -12,9 +12,14 @@ class App {
         const dom = appTemplate;
         
         const displayBackgroundColorPicker = dom.getElementById('background-color-picker');
-        const displayBackgroundColorPickerComponent = new ColorPicker();
+        const displayBackgroundColorPickerComponent = new ColorPicker('Background');
         const displayBGDom = displayBackgroundColorPickerComponent.render();
         displayBackgroundColorPicker.appendChild(displayBGDom);
+
+        const displayTextColorPicker = dom.getElementById('text-color-picker');
+        const displayTextColorPickerComponent = new ColorPicker('Text');
+        const displayTDom = displayTextColorPickerComponent.render();
+        displayTextColorPicker.appendChild(displayTDom);
 
         // const displayDropdown = dom.getElementById('display-dropdown');
         // const displayDropdownComponent = new EffectToApply();
