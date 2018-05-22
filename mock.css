@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(191, 215, 240);
+    margin: 0px auto;
+    max-width: 72%;
+    font-family: 'Roboto', sans-serif;
+}
+#mock-nav {
+    display: flex;
+    justify-content: flex-start;    
+    }
+
+#mock-h1 {
+        font-size: 34px;
+        font-family: 'Roboto', sans-serif;
+        color: rgba(245, 244, 239, 0.79)
+    }
+
+#footer-bar {
+        border-top: 2px solid darkgray;
+        padding: 30px;
+    }
