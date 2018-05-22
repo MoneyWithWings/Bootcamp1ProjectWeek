@@ -74,44 +74,48 @@ font-family: 'Shadows Into Light Two', cursive; */
 
 const fontsArray = [
     {
-        class: '',
+        font: '',
         label: 'Select A Font',
     },
     {
-        class: 'Box-Color',
-        label: 'Box Color (Hover)',
+        font: "'Luckiest Guy', cursive;",
+        label: 'Luckiest Guy',
     },
     {
-        class: 'Marshmallow',
-        label: 'Marshmallow',
+        font: "'Kavivanar', cursive;",
+        label: 'Kavivanar',
     },
     {
-        class: 'Perspective-Rotate',
-        label: 'Stretch (Hover)',
+        font: "'Indie Flower', cursive;",
+        label: 'Indie Flower',
     },
     {
-        class: 'Perspective-Shift',
-        label: 'Perspective Shift',
+        font: "'Lobster', cursive;",
+        label: 'Lobster',
     },
     {
-        class: 'Rotate',
-        label: 'Rotate 360',
+        font: "'Pacifico', cursive;",
+        label: 'Pacifico',
     },
     {
-        class: 'Shadow Elegant',
-        label: 'Shadow - Elegant',
+        font: "'Codystar', cursive;",
+        label: 'Codystar',
     },
     {
-        class: 'Shadow DeepShadow',
-        label: 'Shadow - Deep',
+        font: "'Permanent Marker', cursive;",
+        label: 'Permanent Marker',
     },
     {
-        class: 'Shadow InsetShadow',
-        label: 'Shadow - Inset',
+        font: "'Monoton', cursive;",
+        label: 'Monoton',
     },
     {
-        class: 'Shadow RetroShadow',
-        label: 'Shadow - Retro',
-    }
+        font: "'Kalam', cursive;",
+        label: 'Kalam',
+    },
+    {
+        font: "'Shadows Into Light Two', cursive;",
+        label: 'Shadows Into Light',
+    },
 
 ];
