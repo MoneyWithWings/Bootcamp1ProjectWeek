@@ -1,3 +1,8 @@
+'use strict';
+/* globals */
+/* exported WordToDisplay */
+
+
 const displayTemplate = document.getElementById('display-template').content;
 
 class WordToDisplay {
