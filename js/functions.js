@@ -13,3 +13,11 @@ function updateDisplayWord() {
     displayWord.setAttribute('class', dropDownValue);
     console.log('Added drop down class ', dropDownValue);
 }
+
+function updateBackgroundColor() {
+    let colorStart = document.getElementById('background-color-picker');
+    let colorContainer = colorStart.querySelector('div');
+    let colorValue = colorContainer.querySelector('input').value;
+
+    document.querySelector('body').style.backgroundColor = '#' + colorValue + '';
+}
