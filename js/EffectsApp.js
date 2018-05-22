@@ -1,3 +1,7 @@
+'use strict';
+/* globals WordToDisplay, InputText, EffectToApply */
+/* exported App */
+
 const appTemplate = document.getElementById('app-template').content;
 
 class App {
@@ -15,6 +19,11 @@ class App {
         const displayWordComponent = new WordToDisplay();
         const displayWordDom = displayWordComponent.render();
         displayWordSection.appendChild(displayWordDom);
+
+        const displayInputSection = dom.getElementById('display-input');
+        const displayInputComponent = new InputText();
+        const inputDom = displayInputComponent.render();
+        displayInputSection.appendChild(inputDom);
 
         const displayDropdown = dom.getElementById('display-dropdown');
         const displayDropdownComponent = new EffectToApply();
