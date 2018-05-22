@@ -1,5 +1,5 @@
 'use strict';
-/* globals WordToDisplay, InputText, DropDownMenu, effectsArray */
+/* globals DropDownMenu, effectsArray */
 /* exported App */
 
 const appTemplate = document.getElementById('app-template').content;
@@ -15,7 +15,7 @@ class App {
     render(){
         const dom = appTemplate;
 
-        
+
         const displayDropdown = dom.getElementById('display-dropdown');
         const displayDropdownComponent = new DropDownMenu(effectsArray, 'drop-down-id');
         const selectorDom = displayDropdownComponent.render();
