@@ -1,17 +1,26 @@
+'use strict';
+/* globals */
+/* exported EffectToApply, DropDownMenu*/
 
+const dropDownTemplate = document.getElementById('dropdown-template').content;
 
-const effectsTemplate = document.getElementById('dropdown-template').content;
+class DropDownMenu {
 
-class EffectToApply {
+    constructor(data, id) {
+        this.data = data;
+        this.id = id;
 
-    constructor(effect) {
-        this.effect = effect;
     }
 
     render() {
 
-        const dom = effectsTemplate;
+        const dom = dropDownTemplate.cloneNode(true);
+        const dropDownId = dom.querySelector('select');
+        dropDownId.setAttribute('id', this.id);
 
+        for(var i = 0; i < this.data.length; i++) {
+            
+        }
         // this.container = dom.querySelector('select');
         // const chosenEffect = this.container.querySelector('option');
         // chosenEffect.addEventListener('select', () => {
