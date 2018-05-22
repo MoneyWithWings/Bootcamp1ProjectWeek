@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="css/effects.css" rel="stylesheet" type="text/css">
+    <link href="css/mainstyle.css" rel="stylesheet" type="text/css">
     <title>CSS Effects</title>
 </head>
 <body>
-    <div id="root"></div>
-
-        <h1 id="static-heading">I'm a static heading, can you change me?</h1>
-
-   
+    <div id="root"></div>   
 
         <template id="app-template">
             <section id="display-word"></section>
@@ -21,22 +18,28 @@
         </template>
 
         <template id="display-template">
-            <h1 id="displayWord">This is the display</h1>
+            <h1 id="displayWord">Enter text!</h1>
         </template> 
 
         <template id="input-template">
-            <h1 id="input">This is the input section</h1>
+            <form>
+                <input type="text" id="input-text-box" oninput="updateInputWord()" placeholder="Enter Your Text Here">
+            </form>
         </template> 
 
         <template id="dropdown-template">
             <select id="dropdown" onchange="updateDisplayWord()">
                 <option value ="Skew">Skew</option>
-                <option value ="Rotate">Rotate</option>
+                <option value ="Rotate">Rotate 360&deg;</option>
                 <option value ="Box-Color">Box-Color</option>
                 <option value ="Perspective-Rotate">Perspective-Rotate</option>
                 <option value ="Perspective-Shift">Perspective-Shift</option>
-                <option value ="SpinnerY">SpinnerY</option>
-                <option value ="SpinnerX">SpinnerX</option>
+                <option value ="Shadow Elegant">Shadow - Elegant</option>
+                <option value ="Shadow DeepShadow">Shadow - Deep</option>
+                <option value ="Shadow InsetShadow">Shadow - Inset</option>
+                <option value ="Shadow RetroShadow">Shadow - Retro</option>
+                <option value ="SpinnerY">Spinner Y-axis 360&deg;</option>
+                <option value ="SpinnerX">Spinner X-axis 360&deg;</option>
             </select>
         </template>
 
