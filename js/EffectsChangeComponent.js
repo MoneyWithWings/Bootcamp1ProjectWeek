@@ -19,7 +19,10 @@ class DropDownMenu {
         dropDownId.setAttribute('id', this.id);
 
         for(var i = 0; i < this.data.length; i++) {
-            
+            let newOption = document.createElement('option');
+            newOption.setAttribute('value', this.data[i].class);
+            newOption.textContent = this.data[i].label;
+            dropDownId.appendChild(newOption);
         }
         // this.container = dom.querySelector('select');
         // const chosenEffect = this.container.querySelector('option');
