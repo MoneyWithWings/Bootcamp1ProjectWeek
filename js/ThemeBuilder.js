@@ -74,6 +74,17 @@ class App {
             document.getElementById('flex-footer').style.color = '#' + colorValue + '';
         });
 
+        const displayDropdown = dom.getElementById('header-text-dropdown');
+        const displayDropdownComponent = new DropDownMenu(fontsArray, 'header-font-dd');
+        const selectorDom = displayDropdownComponent.render();
+        displayDropdown.appendChild(selectorDom);
+
+        dom.getElementById('header-font-dd').addEventListener('change', () => {
+            var dropDownValue = document.getElementById('header-font-dd').value;
+            var displayWord = document.getElementById('mock-h1');
+            displayWord.removeAttribute('class');
+            displayWord.setAttribute('class', dropDownValue);
+        });
         
 
 
