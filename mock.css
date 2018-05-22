@@ -21,12 +21,10 @@
 }
  
 #mock-h2 {
-margin-top: 280px;
+margin-top: 230px;
 font-family: 'Open Sans', sans-serif;
 font-size: 40px;
 }
-
-
 
 a:link, a:visited {
     background-color:black;
@@ -42,23 +40,6 @@ a:link, a:visited {
 a:hover {
     opacity: 1.0;
 }
-
-#main-bg-image {
-    background-image: url("images/cow.jpg");
-    height: 360px;
-    margin-right: 10%;
-    margin-left: 10%;
-}
-
-#mock-paragraph {
-    margin: 2%;
-    line-height: 1.5;
-}
-
-.nav-list-li {
-    margin: 1%;
-}
-
 #nav-list {
     color: black;
     display: flex;
@@ -67,6 +48,23 @@ a:hover {
     margin-bottom: 30px;
     text-decoration: none;
 }
+
+#main-bg-image {
+    background-image: url("images/cow.jpg");
+    height: 300px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+#mock-paragraph {
+    margin: 2%;
+    line-height: 1.25;
+}
+
+.nav-list-li {
+    margin: 1%;
+}
+
 
 #main-text {
     display: flex;
@@ -111,6 +109,7 @@ a:hover {
 #footer-button {
     border-color: white;
     border-radius: 8px;
+    border-width: 3px;
     background-color: Transparent;
     margin-left: 20px;
     margin-right: 25px;
