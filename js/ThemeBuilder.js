@@ -80,10 +80,11 @@ class App {
         displayDropdown.appendChild(selectorDom);
 
         dom.getElementById('header-font-dd').addEventListener('change', () => {
-            var dropDownValue = document.getElementById('header-font-dd').value;
+            let dropDownValue = document.getElementById('header-font-dd').value;
             var displayWord = document.getElementById('mock-h1');
-            displayWord.removeAttribute('class');
-            displayWord.setAttribute('class', dropDownValue);
+            displayWord.style.fontFamily = dropDownValue;
+            // displayWord.removeAttribute('class');
+            // displayWord.setAttribute('class', dropDownValue);
         });
         
 
