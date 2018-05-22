@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>CSS Effects</title>
+        <link href="css/effects.css" rel="stylesheet" type="text/css">
         <script src="js/jscolor.js"></script>
 </head>
 <body>
@@ -18,9 +19,9 @@
         </template>
 
         <template id="color-picker-template">
-            <div id="color-picker-container">
+            <div>
                 <span></span>
-                <input class="jscolor">
+                <input onchange="updateBackgroundColor()" type="text" class="jscolor">
             </div>
         </template> 
 
@@ -41,5 +42,6 @@
     <script src="js/ColorPickerComponent.js"></script>
     <script src="js/ThemeBuilder.js"></script>
     <script src="js/EffectsAppMain.js"></script>
+    <script src="js/functions.js"></script>
 </body>
 </html>
