@@ -14,23 +14,28 @@
 <body>
     <div id="root"></div>
     <div id="page-top">
+        
         <template id="app-template">
-            <section id="background-color-picker"></section>
-            <section id="text-color-picker"></section>
-            <section id="header-color-picker"></section>
-            <section id="footer-color-picker"></section>
-            <section id="header-text-dropdown"></section>
+
+            <div id="fixed-1">
+                <section id="background-color-picker"></section>
+                <section id="text-color-picker"></section>
+                <section id="header-color-picker"></section>
+                <section id="footer-color-picker"></section>
+                <section id="header-text-dropdown"></section>
+            </div>
         </template>
-
+        <div id="fixed-2">
         <button onclick="saveValues()">Save</button>
-
+    </div>
+  
         <template id="color-picker-template">
             <div>
                 <span></span>
                 <input type="text" class="jscolor">
             </div>
         </template> 
-
+        
         <template id="dropdown-template">
             <select>
             </select>

@@ -1,3 +1,21 @@
+#fixed-1 {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    align-content: center;
+    background-color: rgb(241, 227, 190);
+    padding: 10px 16px;
+    z-index: 10;
+    
+}
+#fixed-2 {
+    position: fixed;
+    margin-top: 5%;
+}
+
+#lower-page {
+    padding-top: 100px;
+}
 #mock-page-content {
     background-color: rgb(191, 215, 240);
     margin: 0px auto;
@@ -120,7 +138,7 @@ a:hover {
 
 #copyright {
     text-align: center;
-    margin-top: 3%;
+    margin-top: 500px;
     margin-bottom: 3%;
     font-style: 'Open Sans', sans-serif;
 }
