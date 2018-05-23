@@ -17,7 +17,7 @@ class App {
 
 
         const displayDropdown = dom.getElementById('display-dropdown');
-        const displayDropdownComponent = new DropDownMenu(effectsArray, (dropDownValue) => {
+        const displayDropdownComponent = new DropDownMenu(effectsArray, 'effectChange', (dropDownValue) => {
             var displayWord = document.getElementById('displayWord');
             displayWord.removeAttribute('class');
             displayWord.setAttribute('class', dropDownValue);

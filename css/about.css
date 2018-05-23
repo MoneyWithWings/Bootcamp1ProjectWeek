@@ -1,0 +1,52 @@
+#content {
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 10px;
+    max-width: 960px;
+    min-width: 450px;
+}
+
+h1 {
+    
+}
+
+section {
+    border: 1px solid black;
+    padding: 10px;
+    height: fit-content;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+img {
+    padding: 10px;
+}
+
+#robert {
+float: left;
+}
+
+#sarah {
+float: right;
+}
+
+#kevin {
+    float: left;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}

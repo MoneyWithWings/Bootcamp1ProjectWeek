@@ -1,6 +1,47 @@
 'use strict';
-/* exported updateDisplayWord, updateBackgroundColor, updateInputWord */
+/* exported updateDisplayWord, updateBackgroundColor, updateInputWord, saveValues, getPresetByName */
+/* globals NewSave, saveArray */
+let saveName = document.getElementById('save-input');
+let bgColor = document.getElementById('bgHexValue');
+let bodyTextColor = document.getElementById('bodyTextHexValue');
+let headerTextColor = document.getElementById('headerTextHexValue');
+let footerTextColor = document.getElementById('footerTextHexValue');
+let headerFontValue = document.getElementById('headerFontChange');
 
+function getPresetByName(data, name) {
+    for(let i = 0; i < data.length; i++) {
+        if(name === data[i].name) {
+            return data[i];
+        }
+    }
+}
+
+function applyPreset(preset) {
+    document.getElementById('mock-page-content').style.backgroundColor = '#' + preset.backgroundColor + '';
+    document.getElementById('test').style.color = '#' + preset.bodyTextColor + '';
+    document.getElementById('mock-h1').style.color = '#' + preset.headerTextColor + '';
+    document.getElementById('footer-text').style.color = '#' + preset.footerTextColor + '';
+    document.getElementById('mock-h1').style.fontFamily = preset.headerFont;
+    //bgColor.value = preset.backgroundColor;
+}
+
+
+
+function saveValues(){
+    let saveNameValue = saveName.value;
+    let saveBgColor = bgColor.value;
+    let saveBodyTextColor = bodyTextColor.value;
+    let saveHeaderTextColor = headerTextColor.value;
+    let saveFooterTextColor = footerTextColor.value;
+    let saveHeaderFontValue = headerFontValue.value;
+
+
+    let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue);
+    saveArray.push(saveObject);
+    console.log(saveArray);
+
+    window.localStorage.setItem('saves', JSON.stringify(saveArray));
+}
 
 function updateDisplayWord() {
     var dropDownValue = document.getElementById('drop-down-id').value;
@@ -26,3 +67,4 @@ function updateInputWord() {
         displayWord.innerHTML = 'Enter text!';
     }
 }
+

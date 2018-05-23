@@ -5,9 +5,14 @@
 const colorPickerTemplate = document.getElementById('color-picker-template').content;
 
 class ColorPicker {
-    constructor(label, onPick) {
+    constructor(label, id, onPick) {
         this.label = label;
+        this.id = id;
         this.onPick = onPick;
+    }
+
+    update() {
+        
     }
 
     render(){
@@ -21,7 +26,7 @@ class ColorPicker {
         colorPicker.addEventListener('change', () => {
             this.onPick(colorPicker.value);
         });
-        
+        colorPicker.setAttribute('id', this.id);
 
         return dom;
     }

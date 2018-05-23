@@ -1,6 +1,28 @@
 'use strict';
 /* globals */
-/* exported effectsArray fontsArray */
+/* exported effectsArray fontsArray NewSave saveArray */
+
+const loadInformation = window.localStorage.getItem('saves');
+let saveArray = [];
+console.log(JSON.parse(loadInformation));
+
+if(!loadInformation) {
+    console.log('nothing found');
+} else {
+    saveArray = JSON.parse(loadInformation);
+}
+
+
+class NewSave {
+    constructor(name, backgroundColor, headerTextColor, bodyTextColor, footerTextColor, headerFont){
+        this.name = name;
+        this.backgroundColor = backgroundColor;
+        this.headerTextColor = headerTextColor;
+        this.bodyTextColor = bodyTextColor;
+        this.footerTextColor = footerTextColor;
+        this.headerFont = headerFont;
+    }
+}
 
 const effectsArray = [
     {
