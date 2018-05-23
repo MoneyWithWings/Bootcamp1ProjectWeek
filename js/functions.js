@@ -8,6 +8,8 @@ let headerTextColor = document.getElementById('headerTextHexValue');
 let footerTextColor = document.getElementById('footerTextHexValue');
 let headerFontValue = document.getElementById('headerFontChange');
 
+console.log(saveName);
+
 function getPresetByName(data, name) {
     for(let i = 0; i < data.length; i++) {
         if(name === data[i].name) {
@@ -15,6 +17,7 @@ function getPresetByName(data, name) {
         }
     }
 }
+
 
 function applyPreset(preset) {
     document.getElementById('mock-page-content').style.backgroundColor = '#' + preset.backgroundColor + '';
@@ -25,7 +28,9 @@ function applyPreset(preset) {
     //bgColor.value = preset.backgroundColor;
 }
 
-
+function updateSaveList(){
+    this.updateSaves();
+}
 
 function saveValues(){
     let saveNameValue = saveName.value;
@@ -35,12 +40,18 @@ function saveValues(){
     let saveFooterTextColor = footerTextColor.value;
     let saveHeaderFontValue = headerFontValue.value;
 
-
+    for(let i = 0; i < saveArray.length; i++) {
+        if(saveNameValue === saveArray[i].name) {
+            alert('This is already a saved value. Please change the name of your save');
+            break;
+        }
+    }
     let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue);
     saveArray.push(saveObject);
     console.log(saveArray);
 
     window.localStorage.setItem('saves', JSON.stringify(saveArray));
+
 }
 
 function updateDisplayWord() {
