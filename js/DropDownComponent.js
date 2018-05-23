@@ -6,9 +6,9 @@ const dropDownTemplate = document.getElementById('dropdown-template').content;
 
 class DropDownMenu {
 
-    constructor(data, id) {
+    constructor(data, onSelect) {
         this.data = data;
-        this.id = id;
+        this.onSelect = onSelect;
 
     }
 
@@ -16,7 +16,9 @@ class DropDownMenu {
 
         const dom = dropDownTemplate.cloneNode(true);
         const dropDownId = dom.querySelector('select');
-        dropDownId.setAttribute('id', this.id);
+        dropDownId.addEventListener('change', () => {
+            this.onSelect(dropDownId.value);
+        });
 
         for(var i = 0; i < this.data.length; i++) {
             let newOption = document.createElement('option');

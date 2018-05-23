@@ -17,17 +17,14 @@ class App {
 
 
         const displayDropdown = dom.getElementById('display-dropdown');
-        const displayDropdownComponent = new DropDownMenu(effectsArray, 'drop-down-id');
-        const selectorDom = displayDropdownComponent.render();
-        displayDropdown.appendChild(selectorDom);
-
-        dom.getElementById('drop-down-id').addEventListener('change', () => {
-            var dropDownValue = document.getElementById('drop-down-id').value;
+        const displayDropdownComponent = new DropDownMenu(effectsArray, (dropDownValue) => {
             var displayWord = document.getElementById('displayWord');
             displayWord.removeAttribute('class');
             displayWord.setAttribute('class', dropDownValue);
         });
 
+        const selectorDom = displayDropdownComponent.render();
+        displayDropdown.appendChild(selectorDom);
 
         return dom;
     }
