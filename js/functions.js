@@ -1,6 +1,25 @@
 'use strict';
 /* exported updateDisplayWord, updateBackgroundColor, updateInputWord */
 
+let bgColor = document.getElementById('bgHexValue');
+let bodyTextColor = document.getElementById('bodyTextHexValue');
+let headerTextColor = document.getElementById('headerTextHexValue');
+let footerTextColor = document.getElementById('footerTextHexValue');
+let headerFontValue = document.getElementById('headerFontChange');
+
+function saveValues(){
+    let saveBgColor = bgColor.value;
+    let saveBodyTextColor = bodyTextColor.value;
+    let saveHeaderTextColor = headerTextColor.value;
+    let saveFooterTextColor = footerTextColor.value;
+    let saveHeaderFontValue = headerFontValue.value;
+    console.log(saveBgColor);
+    console.log(saveBodyTextColor);
+    console.log(saveHeaderTextColor);
+    console.log(saveFooterTextColor);
+    console.log(saveHeaderFontValue);
+
+}
 
 function updateDisplayWord() {
     var dropDownValue = document.getElementById('drop-down-id').value;
@@ -26,3 +45,4 @@ function updateInputWord() {
         displayWord.innerHTML = 'Enter text!';
     }
 }
+
