@@ -11,6 +11,10 @@ class ColorPicker {
         this.onPick = onPick;
     }
 
+    update() {
+        
+    }
+
     render(){
         const dom = colorPickerTemplate.cloneNode(true);
 

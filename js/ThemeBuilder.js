@@ -66,7 +66,8 @@ class App {
         //load drop down
         const loadDropDown = dom.getElementById('load-dropdown');
         const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
-
+            applyPreset(dropDownValue);
+            console.log('THIS IS BG COLOR VALUE', dropDownValue.backgroundColor);
         });
 
         const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();
