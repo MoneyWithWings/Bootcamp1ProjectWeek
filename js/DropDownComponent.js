@@ -6,9 +6,10 @@ const dropDownTemplate = document.getElementById('dropdown-template').content;
 
 class DropDownMenu {
 
-    constructor(data, id, onSelect) {
+    constructor(data, id, button, onSelect) {
         this.data = data;
         this.id = id;
+        this.button = button;
         this.onSelect = onSelect;
 
     }
@@ -16,17 +17,17 @@ class DropDownMenu {
     render() {
 
         const dom = dropDownTemplate.cloneNode(true);
-        const dropDownId = dom.querySelector('select');
-        dropDownId.addEventListener('change', () => {
-            this.onSelect(dropDownId.value);
+        this.dropDownId = dom.querySelector('select');
+        this.dropDownId.addEventListener('change', () => {
+            this.onSelect(this.dropDownId.value);
         });
-        dropDownId.setAttribute('id', this.id);
+        this.dropDownId.setAttribute('id', this.id);
 
         for(var i = 0; i < this.data.length; i++) {
             let newOption = document.createElement('option');
             newOption.setAttribute('value', this.data[i].class);
             newOption.textContent = this.data[i].label;
-            dropDownId.appendChild(newOption);
+            this.dropDownId.appendChild(newOption);
         }
 
         return dom;
@@ -36,19 +37,25 @@ class DropDownMenu {
     updateSaves(data) {
         this.data = data;
         
-        const selectedPreset = this.data[i];
+        // const selectedPreset = this.data[i];
+        // for(let j = 0;j < this.data.length; j++){
+        //     this.dropDownId.lastElementChild.remove();
+        // }
+
+        while(this.dropDownId.lastElementChild) {
+            this.dropDownId.lastElementChild.remove();
+        }
         
         for(var i = 0; i < this.data.length; i++) {
             let newOption = document.createElement('option');
             
             newOption.textContent = this.data[i].name;
-            console.log(this.dropDownId);
             this.dropDownId.appendChild(newOption);
             
         }
         this.dropDownId.addEventListener('change', () => {
             this.onSelect(getPresetByName(this.data, this.dropDownId.value));
-            console.log(getPresetByName(this.data, this.dropDownId.value));
+
             
         });
     }
@@ -62,6 +69,12 @@ class DropDownMenu {
         // }
 
         this.updateSaves(this.data);
+
+
+
+        this.button.addEventListener('click', () => {
+            this.updateSaves(this.data);
+        });
 
 
 

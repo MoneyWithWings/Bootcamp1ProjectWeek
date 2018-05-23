@@ -12,6 +12,8 @@ if(!loadInformation) {
     saveArray = JSON.parse(loadInformation);
 }
 
+let acquireButton = document.getElementById('save-button');
+
 
 class NewSave {
     constructor(name, backgroundColor, headerTextColor, bodyTextColor, footerTextColor, headerFont){

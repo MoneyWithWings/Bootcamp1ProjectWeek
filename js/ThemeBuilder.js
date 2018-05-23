@@ -74,13 +74,15 @@ class App {
         const selectorBodyDom = displayBodyFontComponent.render();
         displayBodyFont.appendChild(selectorBodyDom);
 
+
         
         //load drop down
+        let acquireButton = document.getElementById('save-button');
         const loadDropDown = dom.getElementById('load-dropdown');
-        const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
+        const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', acquireButton, (dropDownValue) => {
             applyPreset(dropDownValue);
-            console.log('THIS IS BG COLOR VALUE', dropDownValue.backgroundColor);
         });
+
 
         const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();
         loadDropDown.appendChild(displayLoadDropDownDom);
