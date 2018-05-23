@@ -6,8 +6,9 @@ const dropDownTemplate = document.getElementById('dropdown-template').content;
 
 class DropDownMenu {
 
-    constructor(data, onSelect) {
+    constructor(data, id, onSelect) {
         this.data = data;
+        this.id = id;
         this.onSelect = onSelect;
 
     }
@@ -19,6 +20,7 @@ class DropDownMenu {
         dropDownId.addEventListener('change', () => {
             this.onSelect(dropDownId.value);
         });
+        dropDownId.setAttribute('id', this.id);
 
         for(var i = 0; i < this.data.length; i++) {
             let newOption = document.createElement('option');
