@@ -62,6 +62,18 @@ class App {
         
         const selectorDom = displayDropdownComponent.render();
         displayDropdown.appendChild(selectorDom);
+
+
+        //Body Text Font Drop-Down Menu
+        const displayBodyFont = dom.getElementById('body-text-font-dropdown');
+        const displayBodyFontComponent = new DropDownMenu(fontsArray, 'bodyFontChange', (bodyFontValue) => {
+            var bodyFontContent = document.getElementById('test');
+            bodyFontContent.style.fontFamily = bodyFontValue;
+        });
+
+        const selectorBodyDom = displayBodyFontComponent.render();
+        displayBodyFont.appendChild(selectorBodyDom);
+
         
         //load drop down
         const loadDropDown = dom.getElementById('load-dropdown');
@@ -72,6 +84,7 @@ class App {
 
         const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();
         loadDropDown.appendChild(displayLoadDropDownDom);
+
 
         return dom;
     }

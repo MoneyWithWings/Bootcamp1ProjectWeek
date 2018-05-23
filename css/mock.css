@@ -8,9 +8,19 @@
     z-index: 10;
     
 }
+#fixed-11 {
+    position: fixed;
+    top: 39px;
+    display: flex;
+    align-content: center;
+    background-color: rgb(241, 227, 190);
+    padding: 10px 16px;
+    z-index: 10;
+    
+}
 #fixed-2 {
     position: fixed;
-    margin-top: 5%;
+    margin-top: 78px;
 }
 
 #lower-page {
