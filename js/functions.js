@@ -1,5 +1,7 @@
 'use strict';
-/* exported updateDisplayWord, updateBackgroundColor, updateInputWord */
+/* exported updateDisplayWord, updateBackgroundColor, updateInputWord, saveValues */
+/* globals NewSave, saveArray */
+
 
 let bgColor = document.getElementById('bgHexValue');
 let bodyTextColor = document.getElementById('bodyTextHexValue');
@@ -13,12 +15,13 @@ function saveValues(){
     let saveHeaderTextColor = headerTextColor.value;
     let saveFooterTextColor = footerTextColor.value;
     let saveHeaderFontValue = headerFontValue.value;
-    console.log(saveBgColor);
-    console.log(saveBodyTextColor);
-    console.log(saveHeaderTextColor);
-    console.log(saveFooterTextColor);
-    console.log(saveHeaderFontValue);
 
+
+    let saveObject = new NewSave(saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue);
+    saveArray.push(saveObject);
+    console.log(saveArray);
+
+    window.localStorage.setItem('saves', JSON.stringify(saveArray));
 }
 
 function updateDisplayWord() {
