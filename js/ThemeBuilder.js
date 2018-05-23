@@ -1,5 +1,5 @@
 'use strict';
-/* globals ColorPicker, DropDownMenu fontsArray */
+/* globals ColorPicker, DropDownMenu fontsArray saveArray*/
 /* exported App */
 
 const appTemplate = document.getElementById('app-template').content;
@@ -63,6 +63,14 @@ class App {
         const selectorDom = displayDropdownComponent.render();
         displayDropdown.appendChild(selectorDom);
         
+        //load drop down
+        const loadDropDown = dom.getElementById('load-dropdown');
+        const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
+
+        });
+
+        const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();
+        loadDropDown.appendChild(displayLoadDropDownDom);
 
         return dom;
     }

@@ -31,6 +31,22 @@ class DropDownMenu {
 
         return dom;
 
+    }
 
+    renderSaves() {
+        const dom = dropDownTemplate.cloneNode(true);
+        const dropDownId = dom.querySelector('select');
+
+        for(var i = 0; i < this.data.length; i++) {
+            let newOption = document.createElement('option');
+
+            // newOption.setAttribute('value', this.data[i].class);
+
+            newOption.textContent = 'Save' + i;
+            dropDownId.appendChild(newOption);
+        }
+
+
+        return dom;
     }
 }
