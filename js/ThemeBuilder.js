@@ -52,25 +52,17 @@ class App {
         const displayFooterDom = displayFooterColorPickerComponent.render();
         displayFooterColorPicker.appendChild(displayFooterDom);
        
-
+        
+        //Header Font Drop-Down Menu
         const displayDropdown = dom.getElementById('header-text-dropdown');
-        const displayDropdownComponent = new DropDownMenu(fontsArray, 'header-font-dd');
-        const selectorDom = displayDropdownComponent.render();
-        displayDropdown.appendChild(selectorDom);
-
-        dom.getElementById('header-font-dd').addEventListener('change', () => {
-            let dropDownValue = document.getElementById('header-font-dd').value;
+        const displayDropdownComponent = new DropDownMenu(fontsArray, (dropDownValue) => {
             var displayWord = document.getElementById('mock-h1');
             displayWord.style.fontFamily = dropDownValue;
         });
         
-
-
-        // const displayDropdown = dom.getElementById('display-dropdown');
-        // const displayDropdownComponent = new EffectToApply();
-        // const selectorDom = displayDropdownComponent.render();
-        // displayDropdown.appendChild(selectorDom);
-
+        const selectorDom = displayDropdownComponent.render();
+        displayDropdown.appendChild(selectorDom);
+        
 
         return dom;
     }
