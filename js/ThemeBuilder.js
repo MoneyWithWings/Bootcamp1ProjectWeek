@@ -52,7 +52,8 @@ class App {
         const displayFooterDom = displayFooterColorPickerComponent.render();
         displayFooterColorPicker.appendChild(displayFooterDom);
        
-
+        
+        //Header Font Drop-Down Menu
         const displayDropdown = dom.getElementById('header-text-dropdown');
         const displayDropdownComponent = new DropDownMenu(fontsArray, 'header-font-dd');
         const selectorDom = displayDropdownComponent.render();
@@ -64,13 +65,6 @@ class App {
             displayWord.style.fontFamily = dropDownValue;
         });
         
-
-
-        // const displayDropdown = dom.getElementById('display-dropdown');
-        // const displayDropdownComponent = new EffectToApply();
-        // const selectorDom = displayDropdownComponent.render();
-        // displayDropdown.appendChild(selectorDom);
-
 
         return dom;
     }

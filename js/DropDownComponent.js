@@ -24,13 +24,6 @@ class DropDownMenu {
             newOption.textContent = this.data[i].label;
             dropDownId.appendChild(newOption);
         }
-        // this.container = dom.querySelector('select');
-        // const chosenEffect = this.container.querySelector('option');
-        // chosenEffect.addEventListener('select', () => {
-        //     let selectedEffect = document.getElementById('dropdown').value;
-        //     let headerElement = document.getElementById('sample-header');
-        //     headerElement.setAttribute("class", selectedEffect);
-        // });
 
         return dom;
 
