@@ -1,10 +1,21 @@
 'use strict';
 /* globals */
 /* exported effectsArray fontsArray NewSave saveArray */
-const saveArray = [];
+
+const loadInformation = window.localStorage.getItem('saves');
+let saveArray = [];
+console.log(JSON.parse(loadInformation));
+
+if(!loadInformation) {
+    console.log('nothing found');
+} else {
+    saveArray = JSON.parse(loadInformation);
+}
+
 
 class NewSave {
-    constructor(backgroundColor, headerTextColor, bodyTextColor, footerTextColor, headerFont){
+    constructor(name, backgroundColor, headerTextColor, bodyTextColor, footerTextColor, headerFont){
+        this.name = name;
         this.backgroundColor = backgroundColor;
         this.headerTextColor = headerTextColor;
         this.bodyTextColor = bodyTextColor;
