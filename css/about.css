@@ -1,50 +1,73 @@
+body {
+    background-color: #cea00a27;
+}
+
 #content {
     display:flex;
     flex-flow: column nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     align-items: center;
     padding: 10px;
     max-width: 960px;
-    min-width: 450px;
+    min-width: 600px;
+    background-color: #dbe2ef;
+    border: 5px solid #3f72af;
 }
 
 h1 {
-    
+    font-family: 'Bungee Shade', cursive;
+    font-size: 50px;
+    margin: 35px;
 }
 
 section {
-    border: 1px solid black;
-    padding: 10px;
+    border: 0px solid black;
     height: fit-content;
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
-img {
-    padding: 10px;
+p {
+    text-indent: 30px;
+}
+
+#moneywings {
+width: 150px;
+float: right;
+margin-right: 100px;
+margin-top: 15px;
 }
 
 #robert {
+padding: 20px;
 float: left;
 }
 
 #sarah {
+padding: 20px;
 float: right;
 }
 
 #kevin {
-    float: left;
+padding: 20px;
+float: left;
 }
 
 a:link{
     text-decoration: none;
+    color: #3f72af;
 }
 
 a:visited{
     text-decoration: none;
+    color: #3f72af;
 }
 
 a:hover{
-    text-decoration: none;
+    color: rgb(30, 54, 107);
 }
 
 a:active{
