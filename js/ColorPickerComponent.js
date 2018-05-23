@@ -21,7 +21,6 @@ class ColorPicker {
         const colorPicker = container.querySelector('input');
         colorPicker.addEventListener('change', () => {
             this.onPick(colorPicker.value);
-            console.log(colorPicker);
         });
         colorPicker.setAttribute('id', this.id);
 

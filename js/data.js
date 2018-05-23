@@ -1,6 +1,17 @@
 'use strict';
 /* globals */
-/* exported effectsArray fontsArray */
+/* exported effectsArray fontsArray NewSave saveArray */
+const saveArray = [];
+
+class NewSave {
+    constructor(backgroundColor, headerTextColor, bodyTextColor, footerTextColor, headerFont){
+        this.backgroundColor = backgroundColor;
+        this.headerTextColor = headerTextColor;
+        this.bodyTextColor = bodyTextColor;
+        this.footerTextColor = footerTextColor;
+        this.headerFont = headerFont;
+    }
+}
 
 const effectsArray = [
     {
