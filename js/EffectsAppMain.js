@@ -1,3 +1,6 @@
+'use strict';
+/* globals App */
+/* exported */
 
 const app = new App();
 
