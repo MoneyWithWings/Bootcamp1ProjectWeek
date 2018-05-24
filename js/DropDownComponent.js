@@ -1,16 +1,17 @@
 'use strict';
-/* globals */
-/* exported EffectToApply, DropDownMenu*/
+/* globals getPresetByName*/
+/* exported EffectToApply, DropDownMenu, */
 
 const dropDownTemplate = document.getElementById('dropdown-template').content;
 
 class DropDownMenu {
 
-    constructor(data, id, onSelect) {
+    constructor(data, id, onSelect, saveButton, clearButton) {
         this.data = data;
         this.id = id;
         this.onSelect = onSelect;
-
+        this.saveButton = saveButton;
+        this.clearButton = clearButton;
     }
 
     render() {
@@ -32,23 +33,30 @@ class DropDownMenu {
         return dom;
 
     }
+
+    clearSaves() {
+        while(this.dropDownId.lastElementChild) {
+            this.dropDownId.lastElementChild.remove();
+        }
+    }
     
     updateSaves(data) {
         this.data = data;
-        
-        const selectedPreset = this.data[i];
+
+        while(this.dropDownId.lastElementChild) {
+            this.dropDownId.lastElementChild.remove();
+        }
         
         for(var i = 0; i < this.data.length; i++) {
             let newOption = document.createElement('option');
             
             newOption.textContent = this.data[i].name;
-            console.log(this.dropDownId);
             this.dropDownId.appendChild(newOption);
             
         }
         this.dropDownId.addEventListener('change', () => {
             this.onSelect(getPresetByName(this.data, this.dropDownId.value));
-            console.log(getPresetByName(this.data, this.dropDownId.value));
+
             
         });
     }
@@ -57,11 +65,21 @@ class DropDownMenu {
         const dom = dropDownTemplate.cloneNode(true);
         this.dropDownId = dom.querySelector('select');
 
-        // for(let i = 0; i < this.data.length; i++){
 
-        // }
 
         this.updateSaves(this.data);
+
+
+
+        this.saveButton.addEventListener('click', () => {
+            this.updateSaves(this.data);
+        });
+
+        this.clearButton.addEventListener('click', () => {
+            this.clearSaves(this.data);
+        });
+
+
 
 
 

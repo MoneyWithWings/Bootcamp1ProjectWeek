@@ -1,5 +1,5 @@
 'use strict';
-/* globals ColorPicker, DropDownMenu fontsArray saveArray*/
+/* globals ColorPicker, DropDownMenu fontsArray saveArray applyPreset*/
 /* exported App */
 
 const appTemplate = document.getElementById('app-template').content;
@@ -58,6 +58,7 @@ class App {
         const displayDropdownComponent = new DropDownMenu(fontsArray, 'headerFontChange', (dropDownValue) => {
             var displayWord = document.getElementById('mock-h1');
             displayWord.style.fontFamily = dropDownValue;
+            console.log(dropDownValue);
         });
         
         const selectorDom = displayDropdownComponent.render();
@@ -74,13 +75,16 @@ class App {
         const selectorBodyDom = displayBodyFontComponent.render();
         displayBodyFont.appendChild(selectorBodyDom);
 
+
         
         //load drop down
+        let acquireSaveButton = document.getElementById('save-button');
+        let acquireClearButton = document.getElementById('clear-button');
         const loadDropDown = dom.getElementById('load-dropdown');
         const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
             applyPreset(dropDownValue);
-            console.log('THIS IS BG COLOR VALUE', dropDownValue.backgroundColor);
-        });
+        }, acquireSaveButton, acquireClearButton);
+
 
         const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();
         loadDropDown.appendChild(displayLoadDropDownDom);

@@ -28,35 +28,36 @@
             <div id="fixed-11">
                     Body Font:<section id="body-text-font-dropdown"></section>
                     <span>Name your save</span><input type=text id="save-input">
-                    <button onclick="saveValues()">Save</button>
                     <section id="load-dropdown"></section>
-
-                <section id="header-text-dropdown"></section>
-
+                    
+                    <section id="header-text-dropdown"></section>
+                    
+                </div>
+            </template>
+            <div id="fixed-2">
+                
+                
             </div>
-        </template>
-        <div id="fixed-2">
-
-
-    </div>
-  
-        <template id="color-picker-template">
-            <div>
-                <span></span>
-                <input type="text" class="jscolor">
-            </div>
-        </template> 
+            
+            <template id="color-picker-template">
+                <div>
+                    <span></span>
+                    <input type="text" class="jscolor">
+                </div>
+            </template> 
+            
+            <template id="dropdown-template">
+                <select>
+                </select>
+            </template>
+        </div>
         
-        <template id="dropdown-template">
-            <select>
-            </select>
-        </template>
-    </div>
-
-    <div id="lower-page">
+        
+        <div id="lower-page">
+        <button onclick="saveValues()" id="save-button">Save Values</button>
+        <button onclick="clearValues()" id="clear-button">Clear Saves</button>
         <a href="index.html">Back to effects</a>
         <div id="mock-page-content">
-
             <h1 id="mock-h1" class="Roboto">Page of Things</h1>
              
             <section id="mock-nav">
@@ -85,7 +86,7 @@
             <div id="flex-footer">
                 <div><img id="footer-image" src="images/forest.jpg"></div>
                 <div><span id="footer-text">MONESARCHUM TE MEIS. VEL EA PARTEM TORQUATOS ADOLESCENS, ATQUI APERIAM. MODO TANTAS TE DUO.</span></div>
-                <div><button id="footer-button">learn</button></div>
+                <!-- <div><button id="footer-button">learn</button></div> -->
             </div>
 
              
