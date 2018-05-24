@@ -79,10 +79,11 @@ class App {
         
         //load drop down
         let acquireSaveButton = document.getElementById('save-button');
+        let acquireClearButton = document.getElementById('clear-button');
         const loadDropDown = dom.getElementById('load-dropdown');
         const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
             applyPreset(dropDownValue);
-        }, acquireSaveButton);
+        }, acquireSaveButton, acquireClearButton);
 
 
         const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();
