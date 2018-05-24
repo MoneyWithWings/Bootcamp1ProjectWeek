@@ -20,7 +20,7 @@ function getPresetByName(data, name) {
 
 function clearValues(){
     window.localStorage.clear();
-    
+    window.location.reload();
 }
 
 
