@@ -42,6 +42,11 @@ function applyPreset(preset) {
     headerFontValue.value = preset.headerFont;
     bodyFontValue.value = preset.bodyFont;
 
+    bgColor.style.backgroundColor = '#' + preset.backgroundColor + '';
+    btColor.style.backgroundColor = '#' + preset.bodyTextColor + '';
+    htColor.style.backgroundColor = '#' + preset.headerTextColor + '';
+    ftColor.style.backgroundColor = '#' + preset.footerTextColor + '';
+
 
 }
 //runs the update saves method, used for clearing
