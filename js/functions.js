@@ -7,6 +7,7 @@ let bodyTextColor = document.getElementById('bodyTextHexValue');
 let headerTextColor = document.getElementById('headerTextHexValue');
 let footerTextColor = document.getElementById('footerTextHexValue');
 let headerFontValue = document.getElementById('headerFontChange');
+let bodyFontValue = document.getElementById('bodyFontChange');
 
 console.log(saveName);
 
@@ -44,6 +45,7 @@ function saveValues(){
     let saveHeaderTextColor = headerTextColor.value;
     let saveFooterTextColor = footerTextColor.value;
     let saveHeaderFontValue = headerFontValue.value;
+    let saveBodyFontValue = bodyFontValue.value;
 
     for(let i = 0; i < saveArray.length; i++) {
         if(saveNameValue === saveArray[i].name) {
@@ -51,7 +53,7 @@ function saveValues(){
             break;
         }
     }
-    let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue);
+    let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
     saveArray.push(saveObject);
     console.log(saveArray);
 
