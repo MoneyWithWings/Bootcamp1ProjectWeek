@@ -49,18 +49,25 @@ function saveValues(){
     let saveHeaderFontValue = headerFontValue.value;
     let saveBodyFontValue = bodyFontValue.value;
 
+
+    let dupeCount = false;
+
     for(let i = 0; i < saveArray.length; i++) {
         if(saveNameValue === saveArray[i].name) {
-            alert('This is already a saved value. Please change the name of your save');
-            break;
+            dupeCount = true;
         }
         // if(saveNameValue !== saverArray[i].name) {}
     }
-    let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
-    saveArray.push(saveObject);
-    console.log(saveArray);
+    if(saveArray.length >= 0 && dupeCount === false){
+        let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
+        saveArray.push(saveObject);
+    
+    
+        window.localStorage.setItem('saves', JSON.stringify(saveArray));
 
-    window.localStorage.setItem('saves', JSON.stringify(saveArray));
+    } else {
+        alert('There is already a save by that name. Please enter a new name.');
+    }
 
     console.log(saveArray);
 

@@ -4,7 +4,7 @@
 
 const loadInformation = window.localStorage.getItem('saves');
 let saveArray = [];
-console.log(JSON.parse(loadInformation));
+
 
 if(!loadInformation) {
     console.log('nothing found');
