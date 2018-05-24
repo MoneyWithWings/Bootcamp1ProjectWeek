@@ -9,8 +9,7 @@ class App {
     constructor() {
 
     }
-    // let selectedValue = document.getElementById('effects-dropdown').value;
-    // console.log(selectedValue);
+
 
     render(){
         const dom = appTemplate;

@@ -7,7 +7,7 @@ let saveArray = [];
 
 
 if(!loadInformation) {
-    console.log('nothing found');
+    saveArray = [];
 } else {
     saveArray = JSON.parse(loadInformation);
 }
@@ -82,20 +82,6 @@ const effectsArray = [
     },
 
 ];
-
-
-/* Font usage for Google Fonts
-font-family: 'Luckiest Guy', cursive;
-font-family: 'Kavivanar', cursive;
-font-family: 'Indie Flower', cursive;
-font-family: 'Lobster', cursive;
-font-family: 'Pacifico', cursive;
-font-family: 'Codystar', cursive;
-font-family: 'Permanent Marker', cursive;
-font-family: 'Monoton', cursive;
-font-family: 'Kalam', cursive;
-font-family: 'Shadows Into Light Two', cursive; */
-
 
 const fontsArray = [
     {

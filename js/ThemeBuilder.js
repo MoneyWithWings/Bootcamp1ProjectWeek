@@ -58,7 +58,6 @@ class App {
         const displayDropdownComponent = new DropDownMenu(fontsArray, 'headerFontChange', (dropDownValue) => {
             var displayWord = document.getElementById('mock-h1');
             displayWord.style.fontFamily = dropDownValue;
-            console.log(dropDownValue);
         });
         
         const selectorDom = displayDropdownComponent.render();
