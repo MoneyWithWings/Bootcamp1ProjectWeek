@@ -14,16 +14,33 @@
     
     
     <template id="app-template">
-        <h1 id="displayWord">Enter text!</h1>
-        <input type="text" id="input-text-box" oninput="updateInputWord()" placeholder="Enter Your Text Here">
-        <section id="display-dropdown"></section>
+
+        <div id="animate">
+            <h1 id="displayWord">Enter text!</h1>
+        </div>
+
+            
+        <div id="input-and-dropdown-div">
+            <div id="input-box">
+                <input type="text" id="input-text-box" oninput="updateInputWord()" placeholder="Enter Your Text Here">
+            </div>
+            <div id="dropdown-box">
+                <section id="display-dropdown"></section>
+            </div>
+        </div> 
+
+    </template>
+        
+    <template id="dropdown-template">  
+        <select></select>      
     </template>
 
-        
-        <template id="dropdown-template">
-            <select>
-            </select>
-        </template>
+    <section id="bottom">
+        <a href="index.html">Text Effects</a> |
+        <a href="ThemeBuilder.html">Theme Builder</a> |
+        <a href="about.html">About Us</a>
+    </section>
+
     <script src="js/data.js"></script>
     <script src="js/DropDownComponent.js"></script>
     <script src="js/EffectsApp.js"></script>

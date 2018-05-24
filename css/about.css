@@ -37,14 +37,16 @@ float: right;
 
 a:link{
     text-decoration: none;
+    color: #3f72af;
 }
 
 a:visited{
     text-decoration: none;
+    color: #3f72af;
 }
 
 a:hover{
-    text-decoration: none;
+    color: rgb(30, 54, 107);
 }
 
 a:active{
