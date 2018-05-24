@@ -1,6 +1,8 @@
 'use strict';
 /* exported updateDisplayWord, updateBackgroundColor, updateInputWord, saveValues, getPresetByName, applyPreset, updateSaveList, clearValues*/
 /* globals NewSave, saveArray */
+
+//variables grabbing tags that have values to be saved
 let saveName = document.getElementById('save-input');
 let bgColor = document.getElementById('bgHexValue');
 let bodyTextColor = document.getElementById('bodyTextHexValue');
@@ -9,8 +11,8 @@ let footerTextColor = document.getElementById('footerTextHexValue');
 let headerFontValue = document.getElementById('headerFontChange');
 let bodyFontValue = document.getElementById('bodyFontChange');
 
-console.log(saveName);
 
+//Function that loops through save array and acquires a value based on its name
 function getPresetByName(data, name) {
     for(let i = 0; i < data.length; i++) {
         if(name === data[i].name) {
@@ -18,22 +20,22 @@ function getPresetByName(data, name) {
         }
     }
 }
-
+//clears values from local storage
 function clearValues(){
     window.localStorage.clear();
-    // window.location.reload();
+    saveArray = [];
 }
 
-
+//applies values that are loaded from a save file NOTE: THIS DOESN'T APPLY BODY FONT STYLINGS YET
 function applyPreset(preset) {
     document.getElementById('mock-page-content').style.backgroundColor = '#' + preset.backgroundColor + '';
     document.getElementById('test').style.color = '#' + preset.bodyTextColor + '';
     document.getElementById('mock-h1').style.color = '#' + preset.headerTextColor + '';
     document.getElementById('footer-text').style.color = '#' + preset.footerTextColor + '';
     document.getElementById('mock-h1').style.fontFamily = preset.headerFont;
-    //bgColor.value = preset.backgroundColor;
-}
 
+}
+//runs the update saves method, used for clearing
 function updateSaveList(){
     this.updateSaves();
 }
@@ -52,12 +54,15 @@ function saveValues(){
             alert('This is already a saved value. Please change the name of your save');
             break;
         }
+        // if(saveNameValue !== saverArray[i].name) {}
     }
     let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
     saveArray.push(saveObject);
     console.log(saveArray);
 
     window.localStorage.setItem('saves', JSON.stringify(saveArray));
+
+    console.log(saveArray);
 
 }
 

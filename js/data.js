@@ -16,11 +16,11 @@ if(!loadInformation) {
 
 
 class NewSave {
-    constructor(name, backgroundColor, headerTextColor, bodyTextColor, footerTextColor, headerFont, bodyFont){
+    constructor(name, backgroundColor, bodyTextColor, headerTextColor, footerTextColor, headerFont, bodyFont){
         this.name = name;
         this.backgroundColor = backgroundColor;
-        this.headerTextColor = headerTextColor;
         this.bodyTextColor = bodyTextColor;
+        this.headerTextColor = headerTextColor;
         this.footerTextColor = footerTextColor;
         this.headerFont = headerFont;
         this.bodyFont = bodyFont;

@@ -37,6 +37,7 @@ class DropDownMenu {
     clearSaves() {
         while(this.dropDownId.lastElementChild) {
             this.dropDownId.lastElementChild.remove();
+
         }
     }
     
@@ -77,6 +78,7 @@ class DropDownMenu {
 
         this.clearButton.addEventListener('click', () => {
             this.clearSaves(this.data);
+
         });
 
 
