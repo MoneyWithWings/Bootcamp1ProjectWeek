@@ -6,12 +6,12 @@ const dropDownTemplate = document.getElementById('dropdown-template').content;
 
 class DropDownMenu {
 
-    constructor(data, id, onSelect, saveButton) {
+    constructor(data, id, onSelect, saveButton, clearButton) {
         this.data = data;
         this.id = id;
         this.onSelect = onSelect;
         this.saveButton = saveButton;
-
+        this.clearButton = clearButton;
     }
 
     render() {
@@ -32,6 +32,12 @@ class DropDownMenu {
 
         return dom;
 
+    }
+
+    clearSaves() {
+        while(this.dropDownId.lastElementChild) {
+            this.dropDownId.lastElementChild.remove();
+        }
     }
     
     updateSaves(data) {
@@ -67,6 +73,10 @@ class DropDownMenu {
 
         this.saveButton.addEventListener('click', () => {
             this.updateSaves(this.data);
+        });
+
+        this.clearButton.addEventListener('click', () => {
+            this.clearSaves(this.data);
         });
 
 

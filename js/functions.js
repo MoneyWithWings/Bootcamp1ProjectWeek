@@ -1,5 +1,5 @@
 'use strict';
-/* exported updateDisplayWord, updateBackgroundColor, updateInputWord, saveValues, getPresetByName, applyPreset, updateSaveList*/
+/* exported updateDisplayWord, updateBackgroundColor, updateInputWord, saveValues, getPresetByName, applyPreset, updateSaveList, clearValues*/
 /* globals NewSave, saveArray */
 let saveName = document.getElementById('save-input');
 let bgColor = document.getElementById('bgHexValue');
@@ -20,7 +20,7 @@ function getPresetByName(data, name) {
 
 function clearValues(){
     window.localStorage.clear();
-    window.location.reload();
+    // window.location.reload();
 }
 
 
