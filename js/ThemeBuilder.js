@@ -1,5 +1,5 @@
 'use strict';
-/* globals ColorPicker, DropDownMenu fontsArray saveArray*/
+/* globals ColorPicker, DropDownMenu fontsArray saveArray applyPreset*/
 /* exported App */
 
 const appTemplate = document.getElementById('app-template').content;
@@ -58,6 +58,7 @@ class App {
         const displayDropdownComponent = new DropDownMenu(fontsArray, 'headerFontChange', (dropDownValue) => {
             var displayWord = document.getElementById('mock-h1');
             displayWord.style.fontFamily = dropDownValue;
+            console.log(dropDownValue);
         });
         
         const selectorDom = displayDropdownComponent.render();
@@ -77,11 +78,11 @@ class App {
 
         
         //load drop down
-        let acquireButton = document.getElementById('save-button');
+        let acquireSaveButton = document.getElementById('save-button');
         const loadDropDown = dom.getElementById('load-dropdown');
-        const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', acquireButton, (dropDownValue) => {
+        const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
             applyPreset(dropDownValue);
-        });
+        }, acquireSaveButton);
 
 
         const displayLoadDropDownDom = displayLoadDropDownComponent.renderSaves();

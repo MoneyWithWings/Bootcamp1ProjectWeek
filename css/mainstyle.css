@@ -1,27 +1,59 @@
+body {
+    background-color: #cea00a27;
+}
 
+#animate {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 86px;
+    font-family: 'Luckiest Guy', cursive; 
+}
 
-#displayWord {
+#input-and-dropdown-div {
+    display: inline-flex;
     position: fixed;
-    width: fit-content;
-    height: fit-content;
-    margin: auto;
-    padding-top: 10px;
-    font-size: 96px;
-    font-family: 'Luckiest Guy', cursive;
-    top:-100%; right:-100%; left:-100%; bottom:-100%;
+    top: 0px;
+    align-content: center;
+    background-color: #3f72af;
+    padding: 20px 16px;
+    z-index: 1;
+    border-radius: 4px;       
 }
 
-#input-text-box {
-
-    border-radius: 4px;
-    margin-top: 100px;
-    margin-bottom: 10px;
-    padding: 2px;
-    font-size: 20px;
+#input-box {
+    display:flex;
+    margin-right: 10px;    
 }
 
-#display-dropdown {
-    border-radius: 4px;
-    margin-bottom: 10px;
-    padding: 20px;
+#dropdown-box {
+    display: flex;
+    
+}
+
+input {
+    font-size: 18px;
+}
+
+select {
+    font-size: 18px;
+}
+
+
+a:link{
+    text-decoration: none;
+    color: #3f72af;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #3f72af;
+}
+
+a:hover{
+    color: rgb(30, 54, 107);
+}
+
+a:active{
+    text-decoration: none;
 }

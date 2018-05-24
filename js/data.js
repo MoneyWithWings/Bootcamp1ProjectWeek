@@ -1,6 +1,6 @@
 'use strict';
 /* globals */
-/* exported effectsArray fontsArray NewSave saveArray */
+/* exported effectsArray fontsArray NewSave saveArray, */
 
 const loadInformation = window.localStorage.getItem('saves');
 let saveArray = [];
@@ -12,7 +12,7 @@ if(!loadInformation) {
     saveArray = JSON.parse(loadInformation);
 }
 
-let acquireButton = document.getElementById('save-button');
+
 
 
 class NewSave {
