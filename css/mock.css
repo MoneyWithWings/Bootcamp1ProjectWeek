@@ -1,7 +1,11 @@
 body {
-    background-color: #dbe2ef;
+    background-color: #cea00a27;
 }
 
+#pickers {
+    position: fixed;
+    top: 0px;
+}
 #fixed-1 {
     position: fixed;
     top: 0px;
@@ -24,6 +28,7 @@ body {
 #fixed-11 {
     position: fixed;
     top: 39px;
+    
     display: flex;
     align-content: center;
     background-color: #3f72af;
@@ -93,19 +98,25 @@ button {
     width: 70%;
     height: 70%;
     border-radius: 4px;
-   
-    
+      
 }
+
+#mock-nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
 
 a:link, a:visited {
     background-color:black;
     opacity: 0.5;   
     color: white;
     padding: 1px 30px;
-    width: 70px;
+    width: 66px;
     text-align: center; 
     text-decoration: none;
-    display: inline-block;
+    
 }
 
 a:hover {
@@ -114,10 +125,10 @@ a:hover {
 #nav-list {
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     list-style-type: none;
-    margin-bottom: 20px;
     text-decoration: none;
+    padding: 0;
 }
 
 #mock-paragraph {
@@ -126,6 +137,8 @@ a:hover {
 }
 
 .nav-list-li {
+    display: flex;
+    justify-content: space-evenly;
     margin: 1%;
 }
 
@@ -155,7 +168,7 @@ a:hover {
 }
 
 #footer-image {
-    width: 50%;
+    width: 60%;
     height: auto;
     margin-right: 20px;
     margin-bottom: 10px;
