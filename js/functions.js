@@ -5,9 +5,9 @@
 //variables grabbing tags that have values to be saved
 let saveName = document.getElementById('save-input');
 let bgColor = document.getElementById('bgHexValue');
-let bodyTextColor = document.getElementById('bodyTextHexValue');
-let headerTextColor = document.getElementById('headerTextHexValue');
-let footerTextColor = document.getElementById('footerTextHexValue');
+let btColor = document.getElementById('bodyTextHexValue');
+let htColor = document.getElementById('headerTextHexValue');
+let ftColor = document.getElementById('footerTextHexValue');
 let headerFontValue = document.getElementById('headerFontChange');
 let bodyFontValue = document.getElementById('bodyFontChange');
 
@@ -33,6 +33,20 @@ function applyPreset(preset) {
     document.getElementById('mock-h1').style.color = '#' + preset.headerTextColor + '';
     document.getElementById('footer-text').style.color = '#' + preset.footerTextColor + '';
     document.getElementById('mock-h1').style.fontFamily = preset.headerFont;
+    document.getElementById('test').style.fontFamily = preset.bodyFont;
+
+    bgColor.value = preset.backgroundColor;
+    btColor.value = preset.bodyTextColor;
+    htColor.value = preset.headerTextColor;
+    ftColor.value = preset.footerTextColor;
+    headerFontValue.value = preset.headerFont;
+    bodyFontValue.value = preset.bodyFont;
+
+    bgColor.style.backgroundColor = '#' + preset.backgroundColor + '';
+    btColor.style.backgroundColor = '#' + preset.bodyTextColor + '';
+    htColor.style.backgroundColor = '#' + preset.headerTextColor + '';
+    ftColor.style.backgroundColor = '#' + preset.footerTextColor + '';
+
 
 }
 //runs the update saves method, used for clearing
@@ -43,9 +57,9 @@ function updateSaveList(){
 function saveValues(){
     let saveNameValue = saveName.value;
     let saveBgColor = bgColor.value;
-    let saveBodyTextColor = bodyTextColor.value;
-    let saveHeaderTextColor = headerTextColor.value;
-    let saveFooterTextColor = footerTextColor.value;
+    let saveBodyTextColor = btColor.value;
+    let saveHeaderTextColor = htColor.value;
+    let saveFooterTextColor = ftColor.value;
     let saveHeaderFontValue = headerFontValue.value;
     let saveBodyFontValue = bodyFontValue.value;
 
