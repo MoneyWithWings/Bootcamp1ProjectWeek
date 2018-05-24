@@ -23,7 +23,8 @@ function getPresetByName(data, name) {
 //clears values from local storage
 function clearValues(){
     window.localStorage.clear();
-    saveArray = [];
+    // saveArray = [];
+    window.location.reload();
 }
 
 //applies values that are loaded from a save file NOTE: THIS DOESN'T APPLY BODY FONT STYLINGS YET
@@ -70,7 +71,7 @@ function saveValues(){
         if(saveNameValue === saveArray[i].name) {
             dupeCount = true;
         }
-        // if(saveNameValue !== saverArray[i].name) {}
+
     }
     if(saveArray.length >= 0 && dupeCount === false){
         let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
@@ -83,7 +84,7 @@ function saveValues(){
         alert('There is already a save by that name. Please enter a new name.');
     }
 
-    console.log(saveArray);
+    saveName.value = '';
 
 }
 
