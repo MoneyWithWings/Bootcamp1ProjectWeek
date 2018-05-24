@@ -48,19 +48,9 @@ function saveValues(){
     let saveFooterTextColor = footerTextColor.value;
     let saveHeaderFontValue = headerFontValue.value;
     let saveBodyFontValue = bodyFontValue.value;
-    console.log(saveArray.length);
+
 
     let dupeCount = false;
-
-    // if(!saveArray.length){
-    //     let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
-    //     saveArray.push(saveObject);
-    //     console.log(saveArray);
-    
-    //     window.localStorage.setItem('saves', JSON.stringify(saveArray));
-    // } 
-    // else {
-    // }
 
     for(let i = 0; i < saveArray.length; i++) {
         if(saveNameValue === saveArray[i].name) {
@@ -77,7 +67,6 @@ function saveValues(){
     } else {
         alert('There is already a save by that name. Please enter a new name.');
     }
-    console.log(saveArray);
 
 }
 
