@@ -16,20 +16,21 @@
     <div id="page-top">
         
         <template id="app-template">
+            <div id="pickers">
+                <div id="fixed-1">
+                    <section id="background-color-picker"></section>
+                    <section id="text-color-picker"></section>
+                    <section id="header-color-picker"></section>
+                    <section id="footer-color-picker"></section>
 
-            <div id="fixed-1">
-                <section id="background-color-picker"></section>
-                <section id="text-color-picker"></section>
-                <section id="header-color-picker"></section>
-                <section id="footer-color-picker"></section>
-
-            </div>
-            <div id="fixed-11">
-                    Header Font:<section id="header-text-dropdown"></section>
-                    Body Font:<section id="body-text-font-dropdown"></section>
-                    <span>Name your save:</span><input type="text" id="save-input">
-                    <section id="load-dropdown"></section>
-                    
+                </div>
+                <div id="fixed-11">
+                        Header Font:<section id="header-text-dropdown"></section>
+                        Body Font:<section id="body-text-font-dropdown"></section>
+                        <span>Name your save:</span><input type="text" id="save-input">
+                        <section id="load-dropdown"></section>
+                        
+                    </div>
                 </div>
             </template>
             <div id="fixed-2">
@@ -52,9 +53,11 @@
         
         
         <div id="lower-page">
-        <button onclick="saveValues()" id="save-button">Save Values</button>
-        <button onclick="clearValues()" id="clear-button">Clear Saves</button>
-        <a id="effects" href="index.html">Back to effects</a>
+            <div id="buttons-and-back">
+                <button onclick="saveValues()" id="save-button">Save Values</button>
+                <button onclick="clearValues()" id="clear-button">Clear Saves</button>
+                <a id="effects" href="index.html">Back to effects</a>
+            </div>    
         <div id="mock-page-content">
             <h1 id="mock-h1" class="Roboto">Portland, Oregon</h1>
              
@@ -81,8 +84,8 @@
             </div>
 
             <div id="flex-footer">
-                <div><img id="footer-image" src="images/forest.jpg"></div>
-                <div><span id="footer-text">MONESARCHUM TE MEIS. VEL EA PARTEM TORQUATOS ADOLESCENS, ATQUI APERIAM. MODO TANTAS TE DUO.</span></div>
+                <div><img id="footer-image" src="images/coin-toss.jpg"></div>
+                <div><span id="footer-text">BEFORE BEING NAMED "PORTLAND" IN A 1945 COIN TOSS, THE SETTLEMENT WAS KNOWN AS "THE CLEARING." HAD THE COIN LANDED THE OTHER WAY, THE CITY WOULD BE KNOWN AS BOSTON, OREGON.</span></div>
                 <div><button id="footer-button">learn</button></div> 
             </div>
 
