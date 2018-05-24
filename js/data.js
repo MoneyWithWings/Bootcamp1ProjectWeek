@@ -1,6 +1,6 @@
 'use strict';
 /* globals */
-/* exported effectsArray fontsArray NewSave saveArray */
+/* exported effectsArray fontsArray NewSave saveArray, */
 
 const loadInformation = window.localStorage.getItem('saves');
 let saveArray = [];
@@ -11,6 +11,8 @@ if(!loadInformation) {
 } else {
     saveArray = JSON.parse(loadInformation);
 }
+
+
 
 
 class NewSave {
