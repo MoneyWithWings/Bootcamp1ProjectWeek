@@ -5,56 +5,50 @@ body {
 #pickers {
     position: fixed;
     top: 0px;
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px 16px;
+    color: white;
+    background-color: #3f72af;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-shadow:
+    -.5px -.5px black,
+    .5px -.5px 0 black,
+    -.5px .5px 0 black,
+    .5px .5px 0 black;
+    min-width: 930px;
 }
 #fixed-1 {
-    position: fixed;
-    top: 0px;
     display: flex;
-    align-content: center;
-    background-color: #3f72af;
-    padding: 10px 16px;
-    z-index: 10;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 4px;
-    color: white;
-    text-shadow:
-    -.5px -.5px black,
-    .5px -.5px 0 black,
-    -.5px .5px 0 black,
-    .5px .5px 0 black;
-    min-width: 1050px;
+    align-content: center; 
+    padding-top: 6px;
+    margin-bottom: 15px;  
 }
+
 #fixed-11 {
-    position: fixed;
-    top: 39px;
-    
     display: flex;
     align-content: center;
-    background-color: #3f72af;
-    padding: 10px 16px;
-    z-index: 10;
-    font-size : 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    border-radius: 4px;
-    color: white;
-    text-shadow:
-    -.5px -.5px black,
-    .5px -.5px 0 black,
-    -.5px .5px 0 black,
-    .5px .5px 0 black;
-    min-width: 1050px;
+    padding-bottom: 6px;
 }
+
 input {
-    font-size:  16px;
-    margin-right: 4px;
-    margin-left: 4px;
+    width: 80px;
+    font-size: 16px;
+    margin-right: 8px;
+    margin-left: 2px;
+    border-radius: 4px;
+}
+#save-input {
+    width: 110px;
 }
 select {
+    width: 125px;
     font-size: 16px;
-    margin-right: 6px;
-    margin-left: 6px;
+    margin-right: 8px;
+    margin-left: 4px;
 }
+
 button {
     font-size: 16px;
     border-radius: 4px;
@@ -111,7 +105,6 @@ button {
     width: 66px;
     text-align: center; 
     text-decoration: none;
-    
 }
 
 #nav-list a:hover {
@@ -138,11 +131,10 @@ button {
     margin: 1%;
 }
 
-
 #main-text {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 74%;
 }
 
 .mock-main {
@@ -150,8 +142,6 @@ button {
     flex-direction: row;
     justify-content: center;
 }
-
-/* need to make footer section shorter*/
 
 #flex-footer {
     display: flex;
@@ -161,6 +151,8 @@ button {
     border-bottom: 1px solid darkgray;
     padding-top: 3%;
     font-size: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 #footer-image {
@@ -206,6 +198,7 @@ button {
     margin-bottom: 15px;
     text-align: center;
 }
+
 .bottom a:link{
     text-decoration: none;
     color: #3f72af;

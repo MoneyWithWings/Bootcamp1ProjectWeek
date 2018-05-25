@@ -15,7 +15,7 @@ class App {
 
         //Background Color Picker
         const displayBackgroundColorPicker = dom.getElementById('background-color-picker');
-        const displayBackgroundColorPickerComponent = new ColorPicker('Background', 'bgHexValue', (colorValue) => {
+        const displayBackgroundColorPickerComponent = new ColorPicker('Background Color:', 'bgHexValue', (colorValue) => {
             document.getElementById('mock-page-content').style.backgroundColor = '#' + colorValue + '';
         });
 
@@ -25,7 +25,7 @@ class App {
 
         //Text Color Picker
         const displayTextColorPicker = dom.getElementById('text-color-picker');
-        const displayTextColorPickerComponent = new ColorPicker('Text', 'bodyTextHexValue', (colorValue) => {
+        const displayTextColorPickerComponent = new ColorPicker('Text Color:', 'bodyTextHexValue', (colorValue) => {
             document.getElementById('test').style.color = '#' + colorValue + '';
         });
 
@@ -35,7 +35,7 @@ class App {
 
         //Header Color Picker
         const displayHeaderColorPicker = dom.getElementById('header-color-picker');
-        const displayHeaderColorPickerComponent = new ColorPicker('Header', 'headerTextHexValue', (colorValue) => {
+        const displayHeaderColorPickerComponent = new ColorPicker('Header Color:', 'headerTextHexValue', (colorValue) => {
             document.getElementById('mock-h1').style.color = '#' + colorValue + '';
         });
 
@@ -45,7 +45,7 @@ class App {
 
         //Footer Color Picker
         const displayFooterColorPicker = dom.getElementById('footer-color-picker');
-        const displayFooterColorPickerComponent = new ColorPicker('Footer', 'footerTextHexValue', (colorValue) => {
+        const displayFooterColorPickerComponent = new ColorPicker('Footer Color:', 'footerTextHexValue', (colorValue) => {
             document.getElementById('footer-text').style.color = '#' + colorValue + '';
         });
 
