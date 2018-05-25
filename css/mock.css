@@ -5,6 +5,7 @@ body {
 #pickers {
     position: fixed;
     top: 0px;
+    z-index: 1;
 }
 #fixed-1 {
     position: fixed;
@@ -28,7 +29,6 @@ body {
 #fixed-11 {
     position: fixed;
     top: 39px;
-    
     display: flex;
     align-content: center;
     background-color: #3f72af;
@@ -46,11 +46,13 @@ body {
     min-width: 1050px;
 }
 input {
-    font-size:  16px;
+    width: 165px;
+    font-size: 16px;
     margin-right: 4px;
     margin-left: 4px;
 }
 select {
+    width: 165px;
     font-size: 16px;
     margin-right: 6px;
     margin-left: 6px;
@@ -142,7 +144,7 @@ button {
 #main-text {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 74%;
 }
 
 .mock-main {
