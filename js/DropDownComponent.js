@@ -55,6 +55,9 @@ class DropDownMenu {
             this.dropDownId.appendChild(newOption);
             
         }
+
+        //acquires whatever save object was selected when the dropdown component is changed
+        //please refer to js/functions.js, getPresetByName for how this function works
         this.dropDownId.addEventListener('change', () => {
             this.onSelect(getPresetByName(this.data, this.dropDownId.value));
 
@@ -66,11 +69,8 @@ class DropDownMenu {
         const dom = dropDownTemplate.cloneNode(true);
         this.dropDownId = dom.querySelector('select');
 
-
-
+        //loads saves at the start and is used to update saves when they are created/cleared
         this.updateSaves(this.data);
-
-
 
         this.saveButton.addEventListener('click', () => {
             this.updateSaves(this.data);

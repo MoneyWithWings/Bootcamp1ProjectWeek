@@ -74,13 +74,14 @@ class App {
         const selectorBodyDom = displayBodyFontComponent.render();
         displayBodyFont.appendChild(selectorBodyDom);
 
-
-        
-        //load drop down
+        //variables for using the save and clear buttons, needed to feed data into the component
         let acquireSaveButton = document.getElementById('save-button');
         let acquireClearButton = document.getElementById('clear-button');
+        //load the saves drop down component
         const loadDropDown = dom.getElementById('load-dropdown');
         const displayLoadDropDownComponent = new DropDownMenu(saveArray, 'loadOptionsDropDown', (dropDownValue) => {
+            //applies the values from the selected value in the saves dropdown component and applies them to the page elements
+            //please refer to js/functions.js applyPreset to see how this code works
             applyPreset(dropDownValue);
         }, acquireSaveButton, acquireClearButton);
 

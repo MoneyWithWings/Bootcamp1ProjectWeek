@@ -12,7 +12,8 @@ let headerFontValue = document.getElementById('headerFontChange');
 let bodyFontValue = document.getElementById('bodyFontChange');
 
 
-//Function that loops through save array and acquires a value based on its name
+//Function that loops through save array and acquires a selected value based on its name
+//please refer to DropDownComponent for where this is used
 function getPresetByName(data, name) {
     for(let i = 0; i < data.length; i++) {
         if(name === data[i].name) {
@@ -27,7 +28,8 @@ function clearValues(){
     window.location.reload();
 }
 
-//applies values that are loaded from a save file NOTE: THIS DOESN'T APPLY BODY FONT STYLINGS YET
+//applies values that are loaded from a save file
+//please refer to ThemeBuilder.js for where this function is used
 function applyPreset(preset) {
     document.getElementById('mock-page-content').style.backgroundColor = '#' + preset.backgroundColor + '';
     document.getElementById('test').style.color = '#' + preset.bodyTextColor + '';
