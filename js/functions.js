@@ -1,5 +1,5 @@
 'use strict';
-/* exported updateDisplayWord, updateBackgroundColor, updateInputWord, saveValues, getPresetByName, applyPreset, updateSaveList, clearValues*/
+/* exported updateDisplayWord, updateInputWord, saveValues, getPresetByName, applyPreset, updateSaveList, clearValues*/
 /* globals NewSave, saveArray */
 
 //variables grabbing tags that have values to be saved
@@ -12,7 +12,8 @@ let headerFontValue = document.getElementById('headerFontChange');
 let bodyFontValue = document.getElementById('bodyFontChange');
 
 
-//Function that loops through save array and acquires a value based on its name
+//Function that loops through save array and acquires a selected value based on its name
+//please refer to DropDownComponent for where this is used
 function getPresetByName(data, name) {
     for(let i = 0; i < data.length; i++) {
         if(name === data[i].name) {
@@ -27,7 +28,8 @@ function clearValues(){
     window.location.reload();
 }
 
-//applies values that are loaded from a save file NOTE: THIS DOESN'T APPLY BODY FONT STYLINGS YET
+//applies values that are loaded from a save file
+//please refer to ThemeBuilder.js for where this function is used
 function applyPreset(preset) {
     document.getElementById('mock-page-content').style.backgroundColor = '#' + preset.backgroundColor + '';
     document.getElementById('test').style.color = '#' + preset.bodyTextColor + '';
@@ -54,7 +56,7 @@ function applyPreset(preset) {
 function updateSaveList(){
     this.updateSaves();
 }
-
+//saves values from all input fields
 function saveValues(){
     let saveNameValue = saveName.value;
     let saveBgColor = bgColor.value;
@@ -64,15 +66,15 @@ function saveValues(){
     let saveHeaderFontValue = headerFontValue.value;
     let saveBodyFontValue = bodyFontValue.value;
 
-
+    //needed to determine if there is a repeat name value inside of the saved objects
     let dupeCount = false;
-
+    //loops through the saved values, if it finds a repeat makes dupeCount true
     for(let i = 0; i < saveArray.length; i++) {
         if(saveNameValue === saveArray[i].name) {
             dupeCount = true;
         }
-
     }
+    //if dupeCount is false then save the value, if it's not then alert the user and don't save
     if(saveArray.length >= 0 && dupeCount === false){
         let saveObject = new NewSave(saveNameValue, saveBgColor, saveBodyTextColor, saveHeaderTextColor, saveFooterTextColor, saveHeaderFontValue, saveBodyFontValue);
         saveArray.push(saveObject);
@@ -83,7 +85,7 @@ function saveValues(){
     } else {
         alert('There is already a save by that name. Please enter a new name.');
     }
-
+    //using this to reset the input field to blank after save
     saveName.value = '';
 
 }
@@ -93,14 +95,6 @@ function updateDisplayWord() {
     var displayWord = document.getElementById('displayWord');
     displayWord.removeAttribute('class');
     displayWord.setAttribute('class', dropDownValue);
-}
-
-function updateBackgroundColor() {
-    let colorStart = document.getElementById('background-color-picker');
-    let colorContainer = colorStart.querySelector('div');
-    let colorValue = colorContainer.querySelector('input').value;
-
-    document.querySelector('body').style.backgroundColor = '#' + colorValue + '';
 }
 
 function updateInputWord() {
