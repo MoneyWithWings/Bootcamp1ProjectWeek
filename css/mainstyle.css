@@ -46,7 +46,13 @@ select {
 #bottom {
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 15px;
+    margin-bottom: 15px;
     text-align: center;
+    position: fixed;
+    bottom: 25px;
+    left: 40%;
+    right: auto;
 }
 
 a:link{
