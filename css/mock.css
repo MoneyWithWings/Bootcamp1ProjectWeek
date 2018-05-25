@@ -113,7 +113,6 @@ button {
     width: 66px;
     text-align: center; 
     text-decoration: none;
-    
 }
 
 #nav-list a:hover {
@@ -140,7 +139,6 @@ button {
     margin: 1%;
 }
 
-
 #main-text {
     display: flex;
     flex-wrap: wrap;
@@ -153,8 +151,6 @@ button {
     justify-content: center;
 }
 
-/* need to make footer section shorter*/
-
 #flex-footer {
     display: flex;
     flex-direction: row;
@@ -163,6 +159,8 @@ button {
     border-bottom: 1px solid darkgray;
     padding-top: 3%;
     font-size: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 #footer-image {
@@ -208,6 +206,7 @@ button {
     margin-bottom: 15px;
     text-align: center;
 }
+
 .bottom a:link{
     text-decoration: none;
     color: #3f72af;
