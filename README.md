@@ -1,6 +1,8 @@
 # Alchemy Code Lab - Boot Camp 1 - Final Project
 ## CSS Demonstration - Text Effects & Theme Builder
 
+// initial commit 
+
 ### General Project Requirements
 
 * Each person must make meaningful contributions in HTML, CSS, and JavaScript.
