@@ -6,14 +6,8 @@ const appTemplate = document.getElementById('app-template').content;
 
 class App {
 
-    constructor() {
-
-    }
-
-
     render(){
         const dom = appTemplate;
-
 
         const displayDropdown = dom.getElementById('display-dropdown');
         const displayDropdownComponent = new DropDownMenu(effectsArray, 'effectChange', (dropDownValue) => {

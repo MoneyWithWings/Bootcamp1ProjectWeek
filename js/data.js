@@ -83,12 +83,15 @@ const effectsArray = [
 
 ];
 
+// css classes are typically "kebob-case".
+// especially weird to see single class split into multiple names
 const fontsArray = [
     {
         class: '',
         label: 'Select A Font',
     },
     {
+        // class: 'luckiest-guy',
         class: 'Luckiest Guy',
         label: 'Luckiest Guy',
     },
